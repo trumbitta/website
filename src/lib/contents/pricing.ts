@@ -390,12 +390,12 @@ export const pricingFAQ: FAQ = {
         isEurope() ? "€8" : "$9"
       } per month (usually ${
         isEurope() ? "€35" : "$39"
-      }). See <button on:click={() => (isModalOpen = true)} class="font-bold text-link-grey hover:text-black transition duration-200" > Gitpod for Students </button> for more information. </p>`,
+      }). See <button on:click data-open-modal='redeem-student-offer' class="font-bold text-link-grey hover:text-black transition duration-200" > Gitpod for Students </button> for more information. </p>`,
     },
     {
       title: "How can I pay?",
       content:
-        '<p>All our plans can only be paid via credit card.</p> <div class="images"> <img src="/svg/brands/mastercard.svg" alt="Mastercard" width="52" height="40" /> <img src="/svg/brands/visa.svg" alt="Visa" width="72" height="40" /> </div>',
+        '<p>All our plans can only be paid via credit card.</p> <div class="flex mt-xx-small space-x-xx-small"> <img src="/svg/brands/mastercard.svg" alt="Mastercard" width="52" height="40" /> <img src="/svg/brands/visa.svg" alt="Visa" width="72" height="40" /> </div>',
     },
     {
       title: "Can I create a team plan?",

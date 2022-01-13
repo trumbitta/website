@@ -25,36 +25,7 @@
 </script>
 
 <style lang="postcss">
-  .faq {
-    border-radius: 16px;
-    @apply bg-sand-dark rounded-2xl;
-    border: 1px solid transparent;
-  }
-  .faq:hover,
-  .faq:focus {
-    border: 1px solid var(--white);
-  }
-  .faq:not(:last-child) {
-    @apply mb-xx-small;
-  }
-
-  .faq__top {
-    @apply items-center p-medium;
-  }
-
-  .faq__title {
-    @apply inline-block w-5/6;
-  }
-
-  .faq__arrow {
-    @apply h-6 w-6 outline-none transition-all duration-200;
-  }
-
-  .faq__text {
-    @apply m-medium -mt-10;
-  }
-
-  .faq:global(a) {
+  details:global(a) {
     @apply font-semibold;
   }
 
@@ -83,35 +54,23 @@
     }
   }
 
-  .h4 {
-    @apply mb-0;
-  }
-
-  details[open] .faq__arrow {
-    transform: rotate(180deg);
-  }
-
-  summary {
-    list-style: none;
-  }
-
   summary::-webkit-details-marker {
     @apply hidden;
   }
 </style>
 
 <details
-  class="faq"
+  class="faq group bg-sand-dark border border-solid border-transparent focus:border-white hover:border-white rounded-2xl"
   open={isActive}
   on:toggle={setActive}
   id={fragment}
   data-analytics={`{"context":"faq"}`}
 >
-  <summary class="outline-none">
-    <div class="faq__top flex">
-      <h3 class="h4 faq__title flex-1">{title}</h3>
+  <summary class="outline-none list-none">
+    <div class="faq__top flex items-center p-medium">
+      <h3 class="h4 faq__title flex-1 inline-block w-5/6 mb-0">{title}</h3>
       <img
-        class="faq__arrow ml-macro"
+        class="faq__arrow group-open:rotate-180 ml-macro h-6 w-6 outline-none transition-all duration-200"
         width="24"
         height="24"
         src="/arrow.svg"
@@ -119,7 +78,7 @@
       />
     </div>
   </summary>
-  <div class="faq__text text-large">
+  <div class="faq__text text-large m-medium -mt-10">
     <slot />
   </div>
 </details>

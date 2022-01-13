@@ -7,21 +7,21 @@
   import { pricingFAQ } from "$lib/contents/pricing";
 
   let isModalOpen: boolean = false;
+
+  const handleBodyClickToOpenModal = (event: Event) => {
+    if (
+      (event.target as HTMLButtonElement).dataset.openModal ===
+      "redeem-student-offer"
+    ) {
+      isModalOpen = true;
+    }
+  };
 </script>
 
-<style lang="postcss">
-  div :global(.images) {
-    @apply flex mt-xx-small;
-  }
-  div :global(.images > *:not(:last-child)) {
-    @apply mr-xx-small;
-  }
-</style>
+<svelte:body on:click={handleBodyClickToOpenModal} />
 
 <Section>
-  <div>
-    <Faqs faq={pricingFAQ} />
-  </div>
+  <Faqs faq={pricingFAQ} />
 </Section>
 
 <Modal on:close={() => (isModalOpen = false)} isOpen={isModalOpen}>
