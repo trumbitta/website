@@ -5,6 +5,5 @@
 </script>
 
 <Section>
-  <h1 class="text-center mb-small">FAQs</h1>
   <Faqs faq={faqs} />
 </Section>

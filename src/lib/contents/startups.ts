@@ -7,6 +7,7 @@ import {
 import type { ExploreSection } from "$lib/types/explore-section.type";
 import { terminalSource } from "./terminal";
 import type { Card } from "$lib/types/card.type";
+import type { FAQ } from "../types/faq.type";
 
 export const features: Feature[] = [
   {
@@ -59,25 +60,32 @@ export const programBenefits: Card[] = [
   },
 ];
 
-export const faqs: { title: string; text: string }[] = [
-  {
-    title: "Are both SaaS and the self-hosted option part of the program?",
-    text: 'We are happy to manage Gitpod for you to let you focus on the important things, but if you want to <a href="/docs/self-hosted/latest">self-host</a> on your infrastructure, that\'s possible too, without user limit.',
-  },
-  {
-    title:
-      "How do I know if my accelerator/incubator/VC firm is part of Gitpod for Startups?",
-    text: 'Please check this list <a href="/for/startups/organisations">of organisations</a>. You still get one year for free, even if you don\'t find your organisation on the list.',
-  },
-  {
-    title: "What happens after the end of the program?",
-    text: "At the end of the program, you decide if you want to keep using Gitpod in a professional plan or in the free plan with limited usage. You'll be notified before the end of the program.",
-  },
-  {
-    title: "I'm not eligible but still want to use Gitpod",
-    text: 'We have a very generous <a href="/pricing">free plan</a> for up to 50h a month, including private repos.',
-  },
-];
+export const faqs: FAQ = {
+  headline: "FAQs",
+  items: [
+    {
+      title: "Are both SaaS and the self-hosted option part of the program?",
+      content:
+        'We are happy to manage Gitpod for you to let you focus on the important things, but if you want to <a href="/docs/self-hosted/latest">self-host</a> on your infrastructure, that\'s possible too, without user limit.',
+    },
+    {
+      title:
+        "How do I know if my accelerator/incubator/VC firm is part of Gitpod for Startups?",
+      content:
+        'Please check this list <a href="/for/startups/organisations">of organisations</a>. You still get one year for free, even if you don\'t find your organisation on the list.',
+    },
+    {
+      title: "What happens after the end of the program?",
+      content:
+        "At the end of the program, you decide if you want to keep using Gitpod in a professional plan or in the free plan with limited usage. You'll be notified before the end of the program.",
+    },
+    {
+      title: "I'm not eligible but still want to use Gitpod",
+      content:
+        'We have a very generous <a href="/pricing">free plan</a> for up to 50h a month, including private repos.',
+    },
+  ],
+};
 
 export const exploreContents: ExploreSection = {
   title: "Apply Now",
