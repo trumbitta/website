@@ -6,12 +6,5 @@
 </script>
 
 <Section>
-  <Faqs>
-    <h1 class="text-center">FAQs</h1>
-    {#each selfhostedFAQ as item}
-      <Faq title={item.title}>
-        {@html item.content}
-      </Faq>
-    {/each}
-  </Faqs>
+  <Faqs faq={selfhostedFAQ} />
 </Section>
