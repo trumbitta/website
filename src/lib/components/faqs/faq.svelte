@@ -24,77 +24,70 @@
   $: isActive = $activeFaq === title;
 </script>
 
-<style lang="scss">
+<style lang="postcss">
   .faq {
     border-radius: 16px;
-    background: var(--sand-dark);
+    @apply bg-sand-dark rounded-2xl;
     border: 1px solid transparent;
+  }
+  .faq:hover .faq:focus {
+    border: 1px solid var(--white);
+  }
+  .faq:not(:last-child) {
+    @apply mb-xx-small;
+  }
 
-    &:hover,
-    &:focus {
-      border: 1px solid var(--white);
+  .faq__top {
+    @apply items-center p-medium;
+  }
+
+  .faq__title {
+    @apply inline-block w-5/6;
+  }
+
+  .faq__arrow {
+    @apply h-6 w-6 outline-none transition-all duration-200;
+  }
+
+  .faq__text {
+    @apply m-medium -mt-10;
+  }
+
+  .faq:global(a) {
+    @apply font-semibold;
+  }
+
+  @media (max-width: 860px) {
+    .faq__top {
+      @apply p-xx-small items-start;
     }
 
-    &:not(:last-child) {
-      margin-bottom: var(--xx-small);
+    .faq__text {
+      @apply m-xx-small -mt-4;
     }
+  }
 
-    &__top {
-      padding: var(--medium);
-      align-items: center;
-
-      @media (max-width: 860px) {
-        padding: var(--xx-small);
-        align-items: flex-start;
-      }
-
-      @media (max-width: 375px) {
-        padding: var(--micro);
-      }
+  @media (max-width: 375px) {
+    .faq__top {
+      @apply p-micro;
     }
-
-    &__title {
-      display: inline-block;
-      width: 86%;
+    .faq__text {
+      @apply m-micro -mt-2;
     }
+  }
 
-    &__arrow {
-      height: 1.5rem;
-      width: 1.5rem;
-      outline: none;
-      transition: all 0.2s;
-
-      @media (max-width: 768px) {
-        margin-top: 0.188rem;
-      }
-    }
-
-    &__text {
-      margin: var(--medium);
-      margin-top: -2.5rem;
-
-      @media (max-width: 860px) {
-        margin: var(--xx-small);
-        margin-top: -1rem;
-      }
-
-      @media (max-width: 375px) {
-        margin: var(--micro);
-        margin-top: -0.5rem;
-      }
-    }
-
-    & :global(a) {
-      font-weight: 600;
+  @media (max-width: 768px) {
+    .faq__arrow {
+      @apply mt-1;
     }
   }
 
   .h4 {
-    margin-bottom: 0;
+    @apply mb-0;
   }
 
   details[open] .faq__arrow {
-    transform: rotate(180deg);
+    @apply rotate-180;
   }
 
   summary {
@@ -102,7 +95,7 @@
   }
 
   summary::-webkit-details-marker {
-    display: none;
+    @apply hidden;
   }
 </style>
 
