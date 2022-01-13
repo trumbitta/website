@@ -9,6 +9,7 @@ import {
   codeAnywhereFeature,
   multiTrackDevelopmentFeature,
 } from "./home/features";
+import type { FAQ } from "$lib/types/faq.type";
 
 export const quotes: Quote[] = [
   {
@@ -113,16 +114,21 @@ export const programBenefits: Card[] = [
   },
 ];
 
-export const faqs = [
-  {
-    title: "I'm not sure if I qualify for the program?",
-    text: "If you produce software that is relied upon by everyday developers (which if we are honest, is the digital infrastructure that powers the world) then you are in. Fill in the application form and let us decide.",
-  },
-  {
-    title: "I'm not eligible but still want to use Gitpod",
-    text: "We have a very generous <a href='/pricing'>free plan</a> for up to 50h a month, including private repos.",
-  },
-];
+export const faqs: FAQ = {
+  headline: "FAQs",
+  items: [
+    {
+      title: "I'm not sure if I qualify for the program?",
+      content:
+        "If you produce software that is relied upon by everyday developers (which if we are honest, is the digital infrastructure that powers the world) then you are in. Fill in the application form and let us decide.",
+    },
+    {
+      title: "I'm not eligible but still want to use Gitpod",
+      content:
+        "We have a very generous <a href='/pricing'>free plan</a> for up to 50h a month, including private repos.",
+    },
+  ],
+};
 
 export const cards: Card[] = [
   {
