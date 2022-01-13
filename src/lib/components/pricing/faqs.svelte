@@ -10,22 +10,18 @@
   let isModalOpen: boolean = false;
 </script>
 
-<style lang="scss">
-  h2 {
-    text-align: center;
-  }
+<style lang="postcss">
   :global(.images) {
-    display: flex;
-    margin-top: var(--xx-small);
+    @apply flex mt-xx-small;
   }
   :global(.images > *:not(:last-child)) {
-    margin-right: var(--xx-small);
+    @apply mr-xx-small;
   }
 </style>
 
 <Section>
   <Faqs>
-    <h2 class="h1">FAQs</h2>
+    <h1 class="text-center">FAQs</h1>
     {#each pricingFAQ as item}
       <Faq title={item.title}>
         {@html item.content}

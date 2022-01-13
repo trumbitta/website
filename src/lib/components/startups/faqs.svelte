@@ -6,7 +6,7 @@
 </script>
 
 <Section>
-  <h2 class="text-center mb-small">FAQs</h2>
+  <h1 class="text-center mb-small">FAQs</h1>
   <Faqs>
     {#each faqs as f}
       <Faq title={f.title}>

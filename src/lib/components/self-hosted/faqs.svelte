@@ -5,15 +5,9 @@
   import { selfhostedFAQ } from "$lib/contents/self-hosted";
 </script>
 
-<style lang="scss">
-  h2 {
-    text-align: center;
-  }
-</style>
-
 <Section>
   <Faqs>
-    <h2 class="h1">FAQs</h2>
+    <h1 class="text-center">FAQs</h1>
     {#each selfhostedFAQ as item}
       <Faq title={item.title}>
         {@html item.content}
