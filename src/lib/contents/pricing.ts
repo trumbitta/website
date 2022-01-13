@@ -383,8 +383,11 @@ export const pricingFAQ: FAQ[] = [
   },
   {
     title: "Do you offer discounts for students and educational institutions?",
-    content:
-      '<p> Yes, qualified educational institutions may receive a special discount. Please <a href="/contact/sales">Contact us</a>. If you are a student, you may use the Student Unlimited Plan for {isEurope() ? "€8" : "$9"} per month (usually{" "} {isEurope() ? "€35" : "$39"}). See <button on:click={() => (isModalOpen = true)} class="font-bold text-link-grey hover:text-black transition duration-200" > Gitpod for Students </button> for more information. </p>',
+    content: `<p> Yes, qualified educational institutions may receive a special discount. Please <a href="/contact/sales">Contact us</a>. If you are a student, you may use the Student Unlimited Plan for ${
+      isEurope() ? "€8" : "$9"
+    } per month (usually ${
+      isEurope() ? "€35" : "$39"
+    }). See <button on:click={() => (isModalOpen = true)} class="font-bold text-link-grey hover:text-black transition duration-200" > Gitpod for Students </button> for more information. </p>`,
   },
   {
     title: "How can I pay?",
