@@ -10,16 +10,18 @@
 </script>
 
 <style lang="postcss">
-  :global(.images) {
+  div :global(.images) {
     @apply flex mt-xx-small;
   }
-  :global(.images > *:not(:last-child)) {
+  div :global(.images > *:not(:last-child)) {
     @apply mr-xx-small;
   }
 </style>
 
 <Section>
-  <Faqs faq={pricingFAQ} />
+  <div>
+    <Faqs faq={pricingFAQ} />
+  </div>
 </Section>
 
 <Modal on:close={() => (isModalOpen = false)} isOpen={isModalOpen}>
