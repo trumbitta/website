@@ -20,14 +20,7 @@
 </style>
 
 <Section>
-  <Faqs>
-    <h1 class="text-center">FAQs</h1>
-    {#each pricingFAQ as item}
-      <Faq title={item.title}>
-        {@html item.content}
-      </Faq>
-    {/each}
-  </Faqs>
+  <Faqs faq={pricingFAQ} />
 </Section>
 
 <Modal on:close={() => (isModalOpen = false)} isOpen={isModalOpen}>
