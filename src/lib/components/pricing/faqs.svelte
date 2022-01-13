@@ -14,6 +14,13 @@
   h2 {
     text-align: center;
   }
+  :global(.images) {
+    display: flex;
+    margin-top: var(--xx-small);
+  }
+  :global(.images > *:not(:last-child)) {
+    margin-right: var(--xx-small);
+  }
 </style>
 
 <Section>
