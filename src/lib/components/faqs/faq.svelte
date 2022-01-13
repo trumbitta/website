@@ -30,7 +30,8 @@
     @apply bg-sand-dark rounded-2xl;
     border: 1px solid transparent;
   }
-  .faq:hover .faq:focus {
+  .faq:hover,
+  .faq:focus {
     border: 1px solid var(--white);
   }
   .faq:not(:last-child) {
@@ -87,7 +88,7 @@
   }
 
   details[open] .faq__arrow {
-    @apply rotate-180;
+    transform: rotate(180deg);
   }
 
   summary {
