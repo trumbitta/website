@@ -395,7 +395,7 @@ export const pricingFAQ: FAQ = {
     {
       title: "How can I pay?",
       content:
-        '<p>All our plans can only be paid via credit card.</p> <div class="flex mt-xx-small space-x-xx-small"> <img src="/svg/brands/mastercard.svg" alt="Mastercard" width="52" height="40" /> <img src="/svg/brands/visa.svg" alt="Visa" width="72" height="40" /> </div>',
+        '<p>All our plans can only be paid via credit card.</p> <div class="flex mt-xx-small space-x-xx-small"> <img class="mr-4" src="/svg/brands/mastercard.svg" alt="Mastercard" width="52" height="40" /> <img src="/svg/brands/visa.svg" alt="Visa" width="72" height="40" /> </div>',
     },
     {
       title: "Can I create a team plan?",
