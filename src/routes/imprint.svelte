@@ -6,6 +6,20 @@
   import OpenGraph from "$lib/components/open-graph.svelte";
 </script>
 
+<style lang="postcss">
+  article :global() {
+    --h1: 3.375rem;
+    --h2: 3rem;
+    --h3: 2rem;
+    --h4: 1.75rem;
+    --h5: 1.25rem;
+    line-height: 1.75;
+  }
+  a {
+    @apply underline;
+  }
+</style>
+
 <OpenGraph
   data={{
     description: "Gitpod's imprint.",
