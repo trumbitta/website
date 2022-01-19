@@ -6,16 +6,56 @@
   import OpenGraph from "$lib/components/open-graph.svelte";
 </script>
 
+<style lang="postcss">
+  article :global() {
+    --h1: 3.375rem;
+    --h2: 3rem;
+    --h3: 2rem;
+    --h4: 1.75rem;
+    --h5: 1.25rem;
+    line-height: 1.75;
+  }
+  a {
+    @apply underline;
+  }
+  :is(ol.toc, ul) > li::marker {
+    @apply text-h3 font-bold;
+  }
+  ol.toc > li::marker {
+    @apply text-inherit;
+  }
+
+  ::marker {
+    @apply text-orange-800;
+  }
+
+  ul li {
+    @apply relative mb-0;
+  }
+
+  ul li::before {
+    @apply absolute text-orange-800;
+    content: "—";
+    left: calc(var(--xx-small) * -1);
+  }
+
+  @media (min-width: 768px) {
+    ul li::before {
+      left: calc(var(--x-small) * -1);
+    }
+  }
+</style>
+
 <OpenGraph
   data={{
     description: "Gitpod's privacy policy.",
     title: "Privacy",
   }}
 />
-<article class="text-blob">
+<article class="max-w-[94vw] mt-20 mx-auto mb-8 leading-7 lg:w-[50rem]">
   <h1>Privacy Policy</h1>
 
-  <p>
+  <p class="mb-4">
     Below we provide you with an overview of what data we collect for what
     purpose and how we ensure the protection of the data <a href="#short"
       >in short</a
@@ -24,7 +64,7 @@
     <a href="#detailed">in a more detailed form</a>.
   </p>
 
-  <p>
+  <p class="mb-4">
     The controller is Gitpod GmbH, Am Germaniahafen 1, 24143 Kiel/Germany,
     registered with the commercial register of the local court (Amtsgericht)
     Kiel under HRB 22228, represented by the managing directors Sven Efftinge,
@@ -36,17 +76,17 @@
     of our service according to our <a href="/terms">terms of service</a>
     (jointly the <strong>"Service"</strong>).
   </p>
-  <p>
+  <p class="mb-4">
     For any questions about data protection you may contact us via <a
       href="mailto:data@gitpod.io">data@gitpod.io</a
     >.
   </p>
-  <h2 id="short">In Short</h2>
+  <h2 class="mx-0 my-4" id="short">In Short</h2>
 
-  <ul>
-    <li>
-      <h3>Controller</h3>
-      <p>
+  <ul class="pl-xx-small md:pl-x-small">
+    <li class="mb-4">
+      <h3 class="mx-0 my-4">Controller</h3>
+      <p class="mb-4">
         Gitpod GmbH, am Germaniahafen 1, 24143 Kiel/Germany, registered with the
         commercial register of the local court
         <em>(Amtsgericht)</em>
@@ -54,41 +94,45 @@
         Moritz Eysholdt, Dr. Jan K&ouml;hnlein, Email:
         <a href="mailto:contact@gitpod.io">contact@gitpod.io</a>.
       </p>
-      <p>
+      <p class="mb-4">
         We have appointed a data protection officer who may be contacted via <a
           href="mailto:data@gitpod.io">data@gitpod.io</a
         >
       </p>
-      <p>This privacy policy also contains further data controllers.</p>
+      <p class="mb-4">
+        This privacy policy also contains further data controllers.
+      </p>
     </li>
-    <li>
-      <h3>
+    <li class="mb-4">
+      <h3 class="mx-0 my-4">
         Purpose and Legal Basis of Processing Data; Provision and Recipients of
         Data
       </h3>
-      <p>Your data will be used for the following purposes:</p>
-      <ul>
-        <li>to provide the functioning Website,</li>
-        <li>
+      <p class="mb-4">Your data will be used for the following purposes:</p>
+      <ul class="pl-xx-small md:pl-x-small">
+        <li class="mb-4">to provide the functioning Website,</li>
+        <li class="mb-4">
           to implement this privacy policy and carrying out the contractual
           relationship and our Service,
         </li>
-        <li>to analyze how our Service is used and improve it,</li>
-        <li>to detect and prevent fraudulent or abusive use,</li>
-        <li>to provide and analyze our pages on Social Media,</li>
-        <li>to send you important updates about our service,</li>
-        <li>to send you marketing content, including newsletters,</li>
-        <li>to act according to our legal obligations, or</li>
-        <li>
+        <li class="mb-4">to analyze how our Service is used and improve it,</li>
+        <li class="mb-4">to detect and prevent fraudulent or abusive use,</li>
+        <li class="mb-4">to provide and analyze our pages on Social Media,</li>
+        <li class="mb-4">to send you important updates about our service,</li>
+        <li class="mb-4">
+          to send you marketing content, including newsletters,
+        </li>
+        <li class="mb-4">to act according to our legal obligations, or</li>
+        <li class="mb-4">
           as otherwise explained in this privacy policy or by any communication
           by us.
         </li>
       </ul>
-      <p>
+      <p class="mb-4">
         Furthermore, your data will be processed by us with your explicit
         consent.
       </p>
-      <p>
+      <p class="mb-4">
         Applicable legal provisions are in particular those of the regulation
         (EU) 2016/679 of the European Parliament and Council of 27 April 2016,
         repealing the directive 95/46/EC, on the protection of individuals with
@@ -97,7 +141,7 @@
         Federal Data Protection Act <em>(Bundesdatenschutzgesetz, BDSG)</em> and
         the German Telemedia Act <em>(Telemediengesetz, TMG) </em>.
       </p>
-      <p>
+      <p class="mb-4">
         We as well as our external service partners receive your data for
         processing those for the purpose of providing our Service. You provide
         data if this is necessary for the aforementioned purposes. In the event
@@ -105,39 +149,39 @@
         for example, limited or no possibility of using our Service.
       </p>
     </li>
-    <li>
-      <h3>Transfer of Data outside of the EU</h3>
-      <p>
+    <li class="mb-4">
+      <h3 class="mx-0 my-4">Transfer of Data outside of the EU</h3>
+      <p class="mb-4">
         In course of data processing by us data may be transferred to third
         countries, i.e. countries outside the EU. This may happen via
         implementation of third party providers such as cloud services and
         external service partners which process data on our behalf.
       </p>
     </li>
-    <li>
-      <h3>Your Rights</h3>
-      <p>
+    <li class="mb-4">
+      <h3 class="mx-0 my-4">Your Rights</h3>
+      <p class="mb-4">
         You have the right to withdraw your consent relating to the use of data
         any time with effect for the future when such data processing is based
         in your consent.
       </p>
-      <p>
+      <p class="mb-4">
         You are entitled to access the data stored by us and are also entitled
         to amend or rectify your data if such data are incorrect.
       </p>
-      <p>
+      <p class="mb-4">
         You have the right to object to the processing of your personal data,
         for example if your personal data are processed for direct marketing
         purposes.
       </p>
-      <p>You are entitled to request the erasure of your data.</p>
-      <p>
+      <p class="mb-4">You are entitled to request the erasure of your data.</p>
+      <p class="mb-4">
         You are entitled to receive information about the stored data (in a
         structured, current and machine-readable format) at any time and to
         request the correction or deletion of the data in case of incorrect data
         storage.
       </p>
-      <p>
+      <p class="mb-4">
         You have also the right to lodge a complaint with a supervisory
         authority at your choice. An overview of the European National Data
         Protection Authorities may be found here:
@@ -147,16 +191,16 @@
         ><br />
       </p>
     </li>
-    <li>
-      <h3>Period for Storing Data; Deletion</h3>
-      <p>
+    <li class="mb-4">
+      <h3 class="mx-0 my-4">Period for Storing Data; Deletion</h3>
+      <p class="mb-4">
         The data are deleted if such data are no longer necessary for the
         purpose of processing.
       </p>
     </li>
-    <li>
-      <h3>Data Security</h3>
-      <p>
+    <li class="mb-4">
+      <h3 class="mx-0 my-4">Data Security</h3>
+      <p class="mb-4">
         We have implemented measures to ensure data and IT security. The Website
         is operated through a safe SSL-connection. If an SSL-connection is
         activated third parties are prevented from reading any data that are
@@ -165,53 +209,53 @@
     </li>
   </ul>
 
-  <h2 id="detailed">More Detailed Information</h2>
+  <h2 class="mx-0 my-4" id="detailed">More Detailed Information</h2>
 
-  <ol class="ol-roman">
-    <li><a href="#details-I">What are Personal Data?</a></li>
-    <li>
+  <ol class="ol-roman list-inside">
+    <li class="mb-4"><a href="#details-I">What are Personal Data?</a></li>
+    <li class="mb-4">
       <a href="#details-II"
         >How are my Data processed when visiting the Website and contacting us?</a
       >
     </li>
-    <li>
+    <li class="mb-4">
       <a href="#details-III"
         >What Third Party Services, Cookies, Analytics and Social Plugins does
         the Website use?</a
       >
     </li>
-    <li>
+    <li class="mb-4">
       <a href="#details-IV"
         >How are my data processed when using the Gitpod Service (with User
         Account)?</a
       >
     </li>
-    <li>
+    <li class="mb-4">
       <a href="#details-V"
         >How are Data processed when visiting our Social Media pages?</a
       >
     </li>
-    <li>
+    <li class="mb-4">
       <a href="#details-VI"
         >Are my Data transferred to Third Parties? Does automated decision
         making including profiling take place?</a
       >
     </li>
-    <li>
+    <li class="mb-4">
       <a href="#details-VII">Are my Data transferred outside the EU?</a>
     </li>
-    <li><a href="#details-VIII">Your Rights</a></li>
-    <li>
+    <li class="mb-4"><a href="#details-VIII">Your Rights</a></li>
+    <li class="mb-4">
       <a href="#details-IX"
         >Duration of Storing your Data; Data Security; Access and Changes to
         this Privacy Policy; Contact Details</a
       >
     </li>
   </ol>
-  <ol class="toc ol-roman">
-    <li>
-      <h2 id="details-I">What are Personal Data?</h2>
-      <p>
+  <ol class="toc ol-roman list-inside">
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline" id="details-I">What are Personal Data?</h2>
+      <p class="mb-4 mt-x-small">
         Personal data are any information relating to an identified or
         identifiable natural person. Personal data includes e.g. name, email
         address or telephone number. Personal data also includes information
@@ -220,12 +264,12 @@
         consents to the data processing.
       </p>
     </li>
-    <li>
-      <h2 id="details-II">
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline" id="details-II">
         How are my Data processed when visiting the Website and contacting us?
       </h2>
-      <h3>Visiting the Website</h3>
-      <p>
+      <h3 class="mx-0 my-4">Visiting the Website</h3>
+      <p class="mb-4">
         If you browse our Website the provider of the website collects and
         stores information automatically in so-called "server-log-files" that
         your browser transfers to us. These are:
@@ -236,7 +280,7 @@
         </em>
       </p>
 
-      <p>
+      <p class="mb-4">
         If you are using a mobile device the following data may also be
         processed additionally through the Website:
         <em>
@@ -245,12 +289,12 @@
         </em>
       </p>
 
-      <p>
+      <p class="mb-4">
         The data points in the preceding two paragraphs are also forwarded to a
         user data platform.
       </p>
 
-      <p>
+      <p class="mb-4">
         We use these data only for statistical analysis for the purpose of
         operation, security and optimization of the performance and content on
         our Website. This data processing is based on Art. 6 (1) c. for
@@ -260,21 +304,21 @@
         quality insurance and fraud prevention.
       </p>
 
-      <h3>Contacting us</h3>
-      <p>
+      <h3 class="mx-0 my-4">Contacting us</h3>
+      <p class="mb-4">
         When contacting us via email, the User’s details are stored for the
         purpose of processing the enquiry and, if applicable, follow-up
         questions based on your consent based on the legal basis of Art. 6 (1)
         a. GDPR or fulfilling your request based on Art. 6 (1) b. GDPR.
       </p>
 
-      <h3>Emails and Newsletters</h3>
-      <p>
+      <h3 class="mx-0 my-4">Emails and Newsletters</h3>
+      <p class="mb-4">
         With the newsletter we inform the user about the Website, our Service
         and us.
       </p>
 
-      <p>
+      <p class="mb-4">
         When registering for the newsletter via the Website, you have to provide
         an email address. This email address will be transmitted to and stored
         by us (or a provider as specified below). By submitting your address you
@@ -283,7 +327,7 @@
         Art. 6 (1) a. GDPR and we may process such data accordingly.
       </p>
 
-      <p>
+      <p class="mb-4">
         We may also send you newsletters referring to similar services and
         products if you have an existing contractual relationship with us and
         you did not object receiving such emails. The legal basis for such
@@ -292,7 +336,7 @@
         (Art. 6 (1) b. GDPR).
       </p>
 
-      <p id="customer-io">
+      <p class="mb-4" id="customer-io">
         <strong> Use of Customer.io: </strong> The mail provider
         <strong>"Customer.io"</strong> by Peaberry Software Inc., 921 SW
         Washington Street Suite 820 Portland, OR 97205, USA receives and
@@ -304,7 +348,7 @@
         >.
       </p>
 
-      <p>
+      <p class="mb-4">
         The data are stored for the purpose of newsletter subscription will be
         stored by us until you unsubscribe from the newsletter and will be
         deleted after you unsubscribe from the newsletter. Data stored by us for
@@ -312,7 +356,7 @@
         unaffected.
       </p>
 
-      <p>
+      <p class="mb-4">
         <strong
           >You can withdraw your consent or object to the processing of data
           (email address) and their respective use for sending the newsletter
@@ -321,14 +365,14 @@
         via a link in the newsletter itself or notification to us.
       </p>
     </li>
-    <li>
-      <h2 id="details-III">
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline" id="details-III">
         What Third Party Services, Cookies, Analytics and Social Plugins does
         the Website use?
       </h2>
 
-      <h3>Cookies</h3>
-      <p>
+      <h3 class="mx-0 my-4">Cookies</h3>
+      <p class="mb-4">
         In order to offer you a convenient online service featuring numerous
         functions, our Website uses text files (<strong>"Cookies"</strong>)
         containing information to identify returning visitors for the time of
@@ -338,14 +382,14 @@
         help us identify popular sections of our Website.
       </p>
 
-      <p>
+      <p class="mb-4">
         The processing of data when using Cookies is based on our legitimate
         interests of a statistical analysis of the User relationship for
         marketing and quality assurance purposes according to Art. 6 (1) f. GDPR
         or TMG.
       </p>
 
-      <p>
+      <p class="mb-4">
         <strong>OPT-OUT:</strong> You can deactivate the use of Cookies in the
         settings of your browser at any time. To find out how to change the
         settings, please consult the help function of your browser. Users may
@@ -361,15 +405,15 @@
         comfort of use of our services may be restricted.
       </p>
 
-      <h3>Customer.io</h3>
-      <p>
+      <h3 class="mx-0 my-4">Customer.io</h3>
+      <p class="mb-4">
         We use the services by Customer.io for sending newsletters and emails.
         For details on Customer.io please refer to the
         <a href="#customer-io">respective section above</a>.
       </p>
 
-      <h3>Google Analytics</h3>
-      <p>
+      <h3 class="mx-0 my-4">Google Analytics</h3>
+      <p class="mb-4">
         We use Google Analytics a web analytics tool offered by Google (inter
         alia Google Ireland Limited, Gordon House, Barrow Street, Dublin 4,
         Ireland and Google LLC, Mountain View, CA, USA (<strong>"Google"</strong
@@ -385,18 +429,18 @@
         of Google Analytics will not be merged with other data from Google.
       </p>
 
-      <p>
+      <p class="mb-4">
         When the IP address is processed this is based on our legitimate
         interests of a statistical analysis of the relationship for marketing
         and quality assurance purposes according to Art. 6 (1) f. GDPR or TMG.
       </p>
 
-      <p>
+      <p class="mb-4">
         We point out that an <a href="#details-VI"
           >automated decision making or profiling</a
         > can take place when integrating Google or an existing Google account.
       </p>
-      <p>
+      <p class="mb-4">
         For Users who have their usual residence in the European Economic Area
         or Switzerland, Google Ireland Limited is the data controller for your
         data, unless otherwise stated in the privacy notices of a particular
@@ -404,22 +448,22 @@
         Google which is responsible for processing your data and complying with
         applicable data protection laws.
       </p>
-      <p>
+      <p class="mb-4">
         You can also find more information in Google's privacy policy <a
           href="https://policies.google.com/privacy"
           >https://policies.google.com/privacy</a
         >.
       </p>
 
-      <p>
+      <p class="mb-4">
         <strong>OPT-OUT:</strong> You can deactivate the use of Google Analytics
         by enabling the <a href="https://allaboutdnt.com/">"Do Not Track"</a>
         setting in your web browser. You may follow the instructions in
         <a href="https://allaboutdnt.com/#adjust-settings">this guide.</a>
       </p>
 
-      <h3>Google Fonts</h3>
-      <p>
+      <h3 class="mx-0 my-4">Google Fonts</h3>
+      <p class="mb-4">
         Our Website uses the <strong>"Google Fonts"</strong> service of Google (inter
         alia Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland
         and Google LLC, Mountain View, CA, USA to integrate and display text on the
@@ -427,12 +471,12 @@
         address) on servers in the USA.
       </p>
 
-      <p>
+      <p class="mb-4">
         When the IP address is processed this is based on our legitimate
         interests of technical functionality of the Website based on Art. 6 (1)
         f. GDPR or TMG.
       </p>
-      <p>
+      <p class="mb-4">
         For Users who have their usual residence in the European Economic Area
         or Switzerland, Google Ireland Limited is the data controller for your
         data, unless otherwise stated in the privacy notices of a particular
@@ -440,15 +484,15 @@
         Google which is responsible for processing your data and complying with
         applicable data protection laws.
       </p>
-      <p>
+      <p class="mb-4">
         You can also find more information in Google's privacy policy: <a
           href="https://policies.google.com/privacy"
           >https://policies.google.com/privacy</a
         >.
       </p>
 
-      <h3 id="segment-io">Segment</h3>
-      <p>
+      <h3 class="mx-0 my-4" id="segment-io">Segment</h3>
+      <p class="mb-4">
         We use Segment, provided by Segment.io, Inc., on our Website and Product
         to capture marketing- and product-related user information in order to
         offer the best experience to our users. Segment operates in
@@ -456,14 +500,14 @@
           compliance with the GDPR</a
         >.
       </p>
-      <p>
+      <p class="mb-4">
         You can also find more information in Segment's privacy policy:
         <a href="https://segment.com/legal/privacy/"
           >https://segment.com/legal/privacy/</a
         >.
       </p>
 
-      <p>
+      <p class="mb-4">
         <strong>OPT-OUT:</strong> You can deactivate the capturing of
         user-specific Website data by enabling the
         <a href="https://allaboutdnt.com/">"Do Not Track"</a>
@@ -471,8 +515,8 @@
         <a href="https://allaboutdnt.com/#adjust-settings">this guide.</a>
       </p>
 
-      <h3>Mixpanel</h3>
-      <p>
+      <h3 class="mx-0 my-4">Mixpanel</h3>
+      <p class="mb-4">
         We use Mixpanel, provided by Mixpanel, Inc., as data sink for <a
           href="#segment-io">Segment</a
         >
@@ -482,14 +526,14 @@
           compliance with the GDPR</a
         >.
       </p>
-      <p>
+      <p class="mb-4">
         You can also find more information in Mixpanel's privacy policy:
         <a href="https://mixpanel.com/legal/privacy-policy/"
           >https://mixpanel.com/legal/privacy-policy/</a
         >.
       </p>
 
-      <p>
+      <p class="mb-4">
         <strong>OPT-OUT:</strong> You can deactivate that user-specific Website
         informnation is sent to Mixpanel by enabling the
         <a href="https://allaboutdnt.com/">"Do Not Track"</a>
@@ -497,8 +541,8 @@
         <a href="https://allaboutdnt.com/#adjust-settings">this guide.</a>
       </p>
 
-      <h3>Mode Analytics</h3>
-      <p>
+      <h3 class="mx-0 my-4">Mode Analytics</h3>
+      <p class="mb-4">
         We use Mode Analytics, provided by Mode Analytics, Inc., to explore and
         analyse usage data that may contain data captured by <a
           href="#segment-io">Segment</a
@@ -506,14 +550,14 @@
         from the Website and Product. Mode Analytics operates in
         <a href="https://mode.com/gdpr/">compliance with the GDPR</a>.
       </p>
-      <p>
+      <p class="mb-4">
         You can also find more information in Mode's privacy policy: <a
           href="https://mode.com/privacy/">https://mode.com/privacy/</a
         >.
       </p>
 
-      <h3>Orbit Labs</h3>
-      <p>
+      <h3 class="mx-0 my-4">Orbit Labs</h3>
+      <p class="mb-4">
         We use Orbit Labs, provided by Orbit Labs, Inc., to analyse engagement
         of our community on social Platforms such as GitHub, Twitter and
         Discord. Orbit Labs has no access to data of our Website Visitors. Orbit
@@ -524,15 +568,15 @@
         <a href="https://orbit.love/privacy-policy">Privacy Policy</a>).
       </p>
 
-      <h3 id="youtube">Youtube</h3>
-      <p>
+      <h3 class="mx-0 my-4" id="youtube">Youtube</h3>
+      <p class="mb-4">
         We use the YouTube.com platform to [post our own videos and] make them
         publicly available. YouTube is operated by Google (inter alia Youtube
         LLC, USA and Google Ireland Limited, Gordon House, Barrow Street, Dublin
         4, Ireland).
       </p>
 
-      <p>
+      <p class="mb-4">
         Some of our Website contain links to the YouTube platform. In general,
         we are not responsible for the content of websites to which links are
         provided. In the event that you click a link on YouTube, we would like
@@ -540,7 +584,7 @@
         information, IP address) in accordance with its own privacy guidelines
         and uses them for business purposes.
       </p>
-      <p>
+      <p class="mb-4">
         On our Website we also integrate videos stored on YouTube directly. In
         this integration, content from the YouTube website is displayed in
         sub-areas of a browser window. However, YouTube videos are only accessed
@@ -549,7 +593,7 @@
         included, a connection is established to the YouTube servers and the
         content is displayed on the Website by notifying your browser.
       </p>
-      <p>
+      <p class="mb-4">
         YouTube content is only integrated in the ‘extended data protection
         mode’. YouTube provides this by itself, thereby ensuring that YouTube
         does not initially store any cookies on your device. However, when you
@@ -558,14 +602,14 @@
         you unless you log in your YouTube or another Google service (e.g.
         Gmail) account or are permanently registered before accessing the site.
       </p>
-      <p>
+      <p class="mb-4">
         As soon as you click on an integrated video, YouTube only stores cookies
         on your device that do not contain any personally identifiable data,
         unless you are currently logged in to a Google service. These cookies
         can be prevented by appropriate browser settings and extensions (see
         above [add link to opt-out in the “Cookies” section above].
       </p>
-      <p>
+      <p class="mb-4">
         For Users who have their usual residence in the European Economic Area
         or Switzerland, Google Ireland Limited is the data controller for your
         data, unless otherwise stated in the privacy notices of a particular
@@ -573,31 +617,31 @@
         Google which is responsible for processing your data and complying with
         applicable data protection laws.
       </p>
-      <p>
+      <p class="mb-4">
         Further information about data processing and privacy practices of
         YouTube and Google can be found here:
       </p>
-      <ul>
-        <li>
+      <ul class="pl-xx-small md:pl-x-small">
+        <li class="mb-4">
           <a href="https://policies.google.com/privacy"
             >https://policies.google.com/privacy</a
           >
         </li>
-        <li>
+        <li class="mb-4">
           <a href="https://support.google.com/youtube/answer/171780?hl=e"
             >https://support.google.com/youtube/answer/171780?hl=e</a
           >
         </li>
       </ul>
     </li>
-    <li>
-      <h2 id="details-IV">
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline" id="details-IV">
         How are my Data processed when using the Gitpod Service (with User
         Account)?
       </h2>
 
-      <h3>Registration and Access to Existing Account</h3>
-      <p>
+      <h3 class="mx-0 my-4">Registration and Access to Existing Account</h3>
+      <p class="mb-4">
         In order to fully use our full online Service, you will need to
         register. You may only register if you have an existing user account at
         the third party services set forth on the Website, for example the
@@ -608,7 +652,7 @@
         USA, (<strong>"Existing Account"</strong>).
       </p>
 
-      <p>
+      <p class="mb-4">
         When you sign up for using the Gitpod Service via your Existing Account,
         data at such Existing Account with be accessible by us with your
         explicit consent only. Such data include:
@@ -618,12 +662,12 @@
         >
       </p>
 
-      <p>
+      <p class="mb-4">
         You can manage these data at any time via using your Existing Account
         linked to the Gitpod Service.
       </p>
 
-      <p>
+      <p class="mb-4">
         The data entered or transferred via the Existing Account as part of the
         registration process and any further data entered, will only be used via
         the Website and with our support to the extent that this processing is
@@ -633,7 +677,7 @@
         you.
       </p>
 
-      <p>
+      <p class="mb-4">
         The processing of data when using our Service is generally based on your
         explicit consent when signing up (based on Art. 6 (1) a. GDPR) as well
         as the legal basis of Art. 6 (1) b. GDPR or TMG, i.e. the data will be
@@ -642,15 +686,15 @@
         request prior to the contract.
       </p>
 
-      <h3>Use of the Gitpod Service</h3>
-      <p>
+      <h3 class="mx-0 my-4">Use of the Gitpod Service</h3>
+      <p class="mb-4">
         For the further use of the Gitpod Service on the Website you submit more
         data depending on the way of use of our services according to our <a
           href="/terms">terms of service</a
         >.
       </p>
 
-      <p>
+      <p class="mb-4">
         We use the information and data collected in the Service, including your
         personal data, in order to fulfill our contractual obligations for
         you/our customers based on the legal basis of Art. 6 (1) b. GDPR or TMG
@@ -660,7 +704,7 @@
         the Service.
       </p>
 
-      <p>
+      <p class="mb-4">
         In the event we process personal data controlled by the customer as data
         processor we will offer and enter into a respective separate data
         processing agreement with such customer whereas such data processing
@@ -668,36 +712,36 @@
         <a href="mailto:data@gitpod.io">data@gitpod.io</a>.
       </p>
 
-      <p>
+      <p class="mb-4">
         We do not store or receive any kind of payment or credit card data but
         use external payment providers as set forth on the Website.
       </p>
 
-      <p>
+      <p class="mb-4">
         We may also analyze your personal data when using the Gitpod Service for
         the purpose of improving our Service. We may also store your data to
         assure fair use of our Service. The legal basis for analyzing and
         storing such data is Art. 6 (1) f. GDPR with our legitimate interest of
         marketing, quality assurance and fraud prevention.
       </p>
-      <p>
+      <p class="mb-4">
         We also process your data if this is necessary to comply with our legal
         obligations (legal basis: Art. 6 (1) c. GDPR), for example legal
         retention periods.
       </p>
-      <p>
+      <p class="mb-4">
         For the abovementioned purposes your data may also be shared with our
         shareholders or affiliated companies.
       </p>
-      <h3>Integration of Third Party Services</h3>
-      <p>
+      <h3 class="mx-0 my-4">Integration of Third Party Services</h3>
+      <p class="mb-4">
         When using the Gitpod Service your data may also be processed by third
         party providers as set forth in this privacy policy. For details please
         refer to <a href="#details-III">III</a> above as well as
         <a href="#details-VI">VI</a> and <a href="#details-VII">VIII</a> below.
       </p>
 
-      <p>
+      <p class="mb-4">
         When using our paid Service your data will be processed by external
         payment providers. Currently we use the payment services by Stripe (for
         EU/EEA: Stripe Payments Europe, Ltd., 1 Grand Canal Street Lower, Grand
@@ -718,62 +762,62 @@
           https://www.privacyshield.gov/</a
         >).
       </p>
-      <p>
+      <p class="mb-4">
         Our service may also include links to pages on Twitter, Medium, and
         Spectrum Chat. For details please refer to the
         <a href="#details-V">respective section below</a>.
       </p>
     </li>
-    <li>
-      <h2 id="details-V">
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline" id="details-V">
         How are Data processed when visiting our Social Media pages?
       </h2>
-      <p>We operate pages on</p>
-      <ul>
-        <li>
+      <p class="mb-4">We operate pages on</p>
+      <ul class="pl-xx-small md:pl-x-small">
+        <li class="mb-4">
           Twitter (twitter.com or applications) by Twitter Inc., 1355 Market
           Street, Suite 900, San Francisco, CA 94103, USA, please also refer to:
-          <ul>
-            <li>
+          <ul class="pl-xx-small md:pl-x-small">
+            <li class="mb-4">
               <a href="https://twitter.com/de/privacy"
                 >https://twitter.com/de/privacy</a
               >
             </li>
-            <li>
+            <li class="mb-4">
               <a href="https://twitter.com/personalization"
                 >https://twitter.com/personalization</a
               >
             </li>
           </ul>
         </li>
-        <li>
+        <li class="mb-4">
           Medium (medium.com or applications) by A Medium Corporation, 799
           Market Street, 5th Floor, San Francisco, CA 94103, USA, please also
           refer to:
-          <ul>
-            <li>
+          <ul class="pl-xx-small md:pl-x-small">
+            <li class="mb-4">
               <a
                 href="https://policy.medium.com/medium-privacy-policy-f03bf92035c9"
                 >https://policy.medium.com/medium-privacy-policy-f03bf92035c9</a
               >
             </li>
-            <li>
+            <li class="mb-4">
               <a href="https://medium.com/me/settings"
                 >https://medium.com/me/settings</a
               >
             </li>
-            <li>
+            <li class="mb-4">
               <a href="https://medium.com/me/following/suggestions"
                 >https://medium.com/me/following/suggestions</a
               >
             </li>
           </ul>
         </li>
-        <li>
+        <li class="mb-4">
           Spectrum Chat (spectrum.chat or applications) by GitHub Inc., 88 Colin
           P Kelly Jr St, San Francisco, CA 94107, USA, please also refer to:
-          <ul>
-            <li>
+          <ul class="pl-xx-small md:pl-x-small">
+            <li class="mb-4">
               <a href="https://spectrum.chat/privacy.html"
                 >https://spectrum.chat/privacy.html</a
               >
@@ -781,11 +825,11 @@
           </ul>
         </li>
       </ul>
-      <p>
+      <p class="mb-4">
         When you visit our Social Media pages, data is processed both by us and
         by the responsible social media provider.
       </p>
-      <p>
+      <p class="mb-4">
         The respective provider of Social Media assumes the data protection
         obligations towards you as the user, such as information on data
         processing, and is the contact person for your rights. This results from
@@ -795,7 +839,7 @@
         necessary and we will then forward the request to the respective
         provider if necessary.
       </p>
-      <p>
+      <p class="mb-4">
         When using the Social Media providers set forth above data may also be
         processed outside the EU. The US companies of Github and Twitter are
         certified in accordance with the EU-US Privacy Shield agreement, which
@@ -812,7 +856,7 @@
           >https://medium.com/policy/medium-privacy-policy-f03bf92035c9</a
         >.
       </p>
-      <p>
+      <p class="mb-4">
         With our Social Media pages, we can communicate with you and provide you
         with interesting information. We may receive further data from you
         through your comments, shared images, messages and reactions, which are
@@ -822,14 +866,14 @@
         also use cookies and tracking technologies to analyze and improve their
         services.
       </p>
-      <p>
+      <p class="mb-4">
         Data processing takes place with your consent or for the purpose of
         answering your enquiry (Art. 6 (1) a, b GDPR) or on the basis of
         legitimate interests in improving the services, advertising and
         marketing activities and presentation to the outside world (Art. 6 (1) f
         GDPR).
       </p>
-      <p>
+      <p class="mb-4">
         As Twitter user, you can at any time influence how your user behavior is
         recorded when you visit Twitter pages. To do this, you can manage the
         settings for advertising preferences in your Twitter account or under
@@ -848,7 +892,7 @@
           >https://help.twitter.com/forms/privacy</a
         >.
       </p>
-      <p>
+      <p class="mb-4">
         As Medium user, you can at any time influence how your user behavior is
         recorded when you visit Medium pages. To do this, you can manage the
         settings for advertising preferences in your Medium account or under
@@ -864,7 +908,7 @@
           >https://medium.com/policy/medium-privacy- policy-f03bf92035c9</a
         >.
       </p>
-      <p>
+      <p class="mb-4">
         As a user of Spectrum Chat / Github you can find more information on how
         to influence the processing of your data in their privacy policy
         <a href="https://spectrum.chat/privacy.html"
@@ -874,14 +918,14 @@
         <a href="mailto:help@spectrum.chat">help@spectrum.chat</a>.
       </p>
     </li>
-    <li>
-      <h2 id="details-VI">
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline" id="details-VI">
         Are my Data transferred to Third Parties? Does Profiling or automated
         decision making take place?
       </h2>
 
-      <h3>Transfer of Data to Third Parties</h3>
-      <p>
+      <h3 class="mx-0 my-4">Transfer of Data to Third Parties</h3>
+      <p class="mb-4">
         We will transfer your personal data to a third party only (i) within the
         scope of legal provisions, i.e. if we are obliged to transfer the data
         due to a government or court order, or, (ii) if applicable, legal
@@ -891,13 +935,13 @@
         consent.
       </p>
 
-      <p>
+      <p class="mb-4">
         For more information please refer to this privacy policy or contact us
         via <a href="mailto:data@gitpod.io">data@gitpod.io</a>.
       </p>
 
-      <h3>Automated Decision Making including Profiling</h3>
-      <p>
+      <h3 class="mx-0 my-4">Automated Decision Making including Profiling</h3>
+      <p class="mb-4">
         In general we do not process any personal data via automated decision
         making including profiling via the Website or Service. However, such
         profiling or automated decision making may happen by third party
@@ -905,7 +949,7 @@
         fact if possible.
       </p>
 
-      <p>
+      <p class="mb-4">
         Profiling means any automated processing of personal data consisting in
         the use of such personal data to evaluate certain personal aspects
         relating to a natural person, in particular to analyse or predict
@@ -919,20 +963,22 @@
         against him or significantly affects him or her in a similar manner.
       </p>
     </li>
-    <li>
-      <h2 id="details-VII">Are my Data transferred outside the EU?</h2>
-      <p>
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline" id="details-VII">
+        Are my Data transferred outside the EU?
+      </h2>
+      <p class="mb-4">
         When visiting the Website and using our Service data may be transferred
         to countries outside the EU by the third party services referred to in
         <a href="#details-III">Section III</a>.
       </p>
 
-      <p>
+      <p class="mb-4">
         When using our Service your data may also be processed by our cloud
         service provider (namely: Google Cloud) on servers outside the EU.
       </p>
 
-      <p>
+      <p class="mb-4">
         The US companies providing the services of Google, Customer.io, GitHub,
         Stripe, Segment.io, Mixpanel and Chargebee are each certified under
         EU-US-Privacy-Shield and/or comply with data protection standards
@@ -941,60 +987,60 @@
           href="https://www.privacyshield.gov">https://www.privacyshield.gov</a
         >.
       </p>
-      <p>
+      <p class="mb-4">
         Your data may also be processed outside the EU when visiting our Social
         Media pages. For further information please refer to <a
           href="#details-V">section V.</a
         >
       </p>
     </li>
-    <li>
-      <h2 id="details-VIII">Your Rights</h2>
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline" id="details-VIII">Your Rights</h2>
 
-      <p><strong>As a data subject you have the right:</strong></p>
-      <ul>
-        <li>
+      <p class="mb-4"><strong>As a data subject you have the right:</strong></p>
+      <ul class="pl-xx-small md:pl-x-small">
+        <li class="mb-4">
           to withdraw your consent to us at any time. As a result, we are no
           longer allowed to continue the processing of data based on this
           consent in the future;
         </li>
-        <li>
+        <li class="mb-4">
           to object to the processing of your personal data, if your personal
           data are processed on the basis of legitimate interests pursuant to
           Art. 6 (1) f. GDPR insofar as there are reasons for this arising from
           your particular situation;
         </li>
-        <li>to obtain from us access to your personal data;</li>
-        <li>
+        <li class="mb-4">to obtain from us access to your personal data;</li>
+        <li class="mb-4">
           to obtain from us without undue delay the rectification of inaccurate
           personal data concerning you;
         </li>
-        <li>
+        <li class="mb-4">
           to obtain the erasure of your personal data stored with us, unless the
           processing is necessary to exercise the right to free expression of
           opinion and information, to fulfill a legal obligation, for reasons of
           public interest or to assert, exercise or defend legal claims;
         </li>
-        <li>
+        <li class="mb-4">
           to demand the restriction of the processing of your personal data, if
           the accuracy of the data is disputed by you, the processing is
           unlawful, but you refuse its deletion and we no longer need the data,
           but you need it to assert, exercise or defend legal claims or you have
           filed an objection against the processing; and
         </li>
-        <li>
+        <li class="mb-4">
           to receive your personal data, which you have provided to us, in a
           structured, current and machine-readable format or to request the
           transmission to another controller.
         </li>
       </ul>
 
-      <p>
+      <p class="mb-4">
         If you wish to make use of your rights mentioned above please send an
         email to <a href="mailto:data@gitpod.io">data@gitpod.io</a>.
       </p>
 
-      <p>
+      <p class="mb-4">
         If you obtain access to your personal data you may, in particular,
         request access to the following information: the purposes of the
         processing, the categories of personal data concerned, the recipients or
@@ -1010,7 +1056,7 @@
         including profiling and meaningful information about this event.
       </p>
 
-      <p>
+      <p class="mb-4">
         <strong
           >You have the right to lodge a complaint vis-&agrave;-vis a
           supervisory authority of your choice.
@@ -1026,14 +1072,14 @@
         >
       </p>
     </li>
-    <li>
-      <h2 id="details-IX">
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline" id="details-IX">
         Duration of Storing your Data; Data Security; Access and Changes to this
         Privacy Policy; Contact Details
       </h2>
 
-      <h3>Duration of Storing your Data</h3>
-      <p>
+      <h3 class="mx-0 my-4">Duration of Storing your Data</h3>
+      <p class="mb-4">
         As a rule, we only store your personal data for as long as it is
         necessary for the execution of the contract or the respective purpose
         and limit the storage period to an absolutely necessary minimum. Your
@@ -1041,7 +1087,7 @@
         seven (7) days for security and technical reasons.
       </p>
 
-      <p>
+      <p class="mb-4">
         In the case of long-term contractual relationships, such as the use of
         our Service, these storage periods may vary, but are generally limited
         to the duration of the contractual relationship or, with regard to the
@@ -1053,7 +1099,7 @@
         <em>(Abgabenordnung, AO)</em>
       </p>
 
-      <p>
+      <p class="mb-4">
         Criteria for the storage period include whether the data are still
         up-to-date, whether the contractual relationship with us still exists,
         whether an inquiry has already been processed, whether a process has
@@ -1061,39 +1107,39 @@
         personal data concerned are relevant or not.
       </p>
 
-      <h3>Data Security</h3>
-      <p>
+      <h3 class="mx-0 my-4">Data Security</h3>
+      <p class="mb-4">
         We have installed technical and organizational measures in order to
         safeguard our Website and/or Service against loss, destruction, access,
         changes or the distribution of your data by unauthorized persons.
       </p>
 
-      <p>
+      <p class="mb-4">
         The Website and Service is operated through a safe SSL-connection. If an
         SSL-connection is activated third parties are prevented from reading any
         data that are transferred by you to us.
       </p>
 
-      <h3>Access and Changes to this Privacy Policy</h3>
-      <p>
+      <h3 class="mx-0 my-4">Access and Changes to this Privacy Policy</h3>
+      <p class="mb-4">
         This privacy policy is accessible via our Website under <a
           href="/privacy">https://gitpod.io/privacy</a
         >
         and may be downloaded and printed anytime.
       </p>
 
-      <p>
+      <p class="mb-4">
         We reserve the right to change the regulations of this privacy policy at
         any time, taking into account currently applicable data protection
         provisions. In case of any changes, you will be notified.
       </p>
 
-      <h3>Contact Details</h3>
-      <p>
+      <h3 class="mx-0 my-4">Contact Details</h3>
+      <p class="mb-4">
         For any inquiries and additional questions about processing personal
         data please contact <a href="mailto:data@gitpod.io">data@gitpod.io</a>.
       </p>
-      <p>
+      <p class="mb-4">
         Further details may be found here:
         <a href="/imprint">https://gitpod.io/imprint</a>.
       </p>

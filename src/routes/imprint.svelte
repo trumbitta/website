@@ -12,29 +12,29 @@
     title: "Imprint",
   }}
 />
-<article class="text-blob">
+<article class="max-w-[94vw] mt-20 mx-auto mb-8 leading-7 lg:w-[50rem]">
   <h1>Imprint</h1>
-  <p>
+  <p class="mb-4">
     Gitpod&nbsp;GmbH
     <br /> Managing Directors: Sven Efftinge, Moritz Eysholdt, Dr. Jan Köhnlein
     <br /> Am Germaniahafen 1
     <br /> 24143 Kiel
     <br /> Germany
   </p>
-  <p>HRB 22228, Amtsgericht Kiel</p>
-  <p>
+  <p class="mb-4">HRB 22228, Amtsgericht Kiel</p>
+  <p class="mb-4">
     VAT-ID :&nbsp;
     <span>DE335127327</span>
   </p>
-  <p>Email: contact@gitpod.io</p>
-  <p>
+  <p class="mb-4">Email: contact@gitpod.io</p>
+  <p class="mb-4">
     Responsible for all content according to
     <b>§ 55 Rundfunkstaatsvertrag (RSTV)</b>:
   </p>
-  <p>Sven Efftinge,&nbsp;Hofteichstr.7,&nbsp;24113 Kiel</p>
-  <h2>Disclaimer</h2>
-  <h3>Liability for content</h3>
-  <p>
+  <p class="mb-4">Sven Efftinge,&nbsp;Hofteichstr.7,&nbsp;24113 Kiel</p>
+  <h2 class="mx-0 my-4 inline">Disclaimer</h2>
+  <h3 class="mx-0 my-4">Liability for content</h3>
+  <p class="mb-4">
     As a service provider we are responsible according to § 7 paragraph 1 of TMG
     for own contents on these pages under the general laws. According to § § 8
     to 10 TMG we are not obliged as a service provider to monitor transmitted or
@@ -44,8 +44,8 @@
     only possible from the date of knowledge of a specific infringement. Upon
     notification of such violations, we will remove the content immediately.
   </p>
-  <h3>Liability for links</h3>
-  <p>
+  <h3 class="mx-0 my-4">Liability for links</h3>
+  <p class="mb-4">
     Our site contains links to external websites over which we have no control.
     Therefore we can not accept any responsibility for their content. The
     respective provider or operator of the pages is always responsible for the
@@ -55,8 +55,8 @@
     concrete evidence of a violation. Upon notification of violations, we will
     remove such links immediately.
   </p>
-  <h3>Copyright</h3>
-  <p>
+  <h3 class="mx-0 my-4">Copyright</h3>
+  <p class="mb-4">
     The contents and works on these pages created by the site operator are
     subject to German copyright law. Duplication, processing, distribution and
     any kind of exploitation outside the limits of copyright require the written
@@ -67,8 +67,8 @@
     still get aware of copyright infringement, we ask for a hint. Upon
     notification of violations, we will remove such content immediately.
   </p>
-  <h3>Settlements of Disputes</h3>
-  <p>
+  <h3 class="mx-0 my-4">Settlements of Disputes</h3>
+  <p class="mb-4">
     The European Commission provides a platform for an online settlement of
     disputes which can be accessed under <a
       rel="noreferrer"

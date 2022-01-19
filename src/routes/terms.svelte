@@ -6,16 +6,29 @@
   import OpenGraph from "$lib/components/open-graph.svelte";
 </script>
 
+<style lang="postcss">
+  :is(ol.toc, ul) > li::marker {
+    @apply text-h3 font-bold;
+  }
+  ol.toc > li::marker {
+    @apply text-inherit;
+  }
+
+  ::marker {
+    @apply text-orange-800;
+  }
+</style>
+
 <OpenGraph
   data={{
     description: "Gitpod's terms of service.",
     title: "Terms",
   }}
 />
-<article class="text-blob">
+<article class="max-w-[94vw] mt-20 mx-auto mb-8 leading-7 lg:w-[50rem]">
   <h1>Gitpod Terms of Service</h1>
 
-  <p>
+  <p class="mb-4">
     The provider of the internet services and other products supplied or
     provided available at gitpod.io (the <strong>"Website"</strong>
     and together with the internet services and other products, the
@@ -25,7 +38,7 @@
     Eysholdt, Dr. Jan Köhnlein (<strong>"Gitpod"</strong> or
     <strong>"we/our"</strong>).
   </p>
-  <p>
+  <p class="mb-4">
     The use of the scope of Services provided by us and used by our registered
     customers in form of individuals and businesses (each a <strong
       >"Customer"</strong
@@ -34,7 +47,7 @@
     of service (<strong>"Terms of Service"</strong> or
     <strong>"Agreement"</strong>).
   </p>
-  <p>
+  <p class="mb-4">
     These Terms of Service shall apply to all Customers including consumers
     according to Section 13 of the German Civil Code (BGB) and entrepreneurs
     according to Section 14 of the German Civil Code (BGB). A consumer is a
@@ -45,15 +58,17 @@
     transaction, acts in the exercise of his commercial or self-employed
     professional activity (each an <strong>"Entrepreneur"</strong>).
   </p>
-  <p>
+  <p class="mb-4">
     Any provisions, which are contrary to these Terms of Service, are not part
     of the contract, unless we explicitly and in writing agree that these
     provisions shall be valid.
   </p>
-  <ol class="toc ol-alpha">
-    <li>
-      <h2>Creating an Account and Conclusion of the Agreement</h2>
-      <p>
+  <ol class="toc ol-alpha list-inside">
+    <li class="mb-4 my-small">
+      <h2 class="inline">
+        Creating an Account and Conclusion of the Agreement
+      </h2>
+      <p class="mb-4 mt-x-small">
         It is a prerequisite to use the Service of Gitpod having an existing
         account of Customer at https://github.com operated by GitHub Inc., 88
         Colin P Kelly Jr St, San Francisco, CA 94107, USA or any other third
@@ -61,7 +76,7 @@
           >"Existing Account"</strong
         >).
       </p>
-      <p>
+      <p class="mb-4">
         You acknowledge that you have read, understand and offer to conclude
         this Agreement when you (i) use or sign in to the Service, (ii) provide
         the data, which is managed in accordance with our <a href="/privacy"
@@ -74,74 +89,74 @@
         about the usage of the Service and agrees to the Agreement and the
         privacy policy of Gitpod which are valid at the time of registration.
       </p>
-      <p>
+      <p class="mb-4">
         Notwithstanding anything in the contrary in this Agreement, upon your
         offer to enter into this Agreement, we may, at our discretion, decide to
         accept or reject such offer. Unless an explicit declaration of the
         acceptance is given, our acceptance can be deemed given when Gitpod
         grants the Service offered under this Agreement.
       </p>
-      <p>
+      <p class="mb-4">
         There is no legal entitlement for using the services provided by Gitpod.
         Gitpod has the right to stop or deny any registration without giving any
         reasons.
       </p>
-      <p>
+      <p class="mb-4">
         By the time of sign-up the Customer must be at least 18 years old and
         fully contractually capable. In case of doubt Gitpod is entitled to ask
         the individual Customer to submit a documentary evidence of age or
         contractual capability.
       </p>
-      <p>
+      <p class="mb-4">
         In order to access or amend the data relating to the Gitpod account the
         Customer shall access or amend such data within the Existing Account.
       </p>
-      <p>
+      <p class="mb-4">
         During our Services, you remain in control of your Existing Account.
         Cancelation or termination of our Services has no effect on your
         Existing Account.
       </p>
-      <p>
+      <p class="mb-4">
         After successful registration the Customer shall be able to log in for
         using our Service. A login is only possible via the access data assigned
         to the Customer by Gitpod (user name and password).
       </p>
     </li>
-    <li>
-      <h2>Support and Consulting</h2>
-      <p>
+    <li class="mb-4 my-small">
+      <h2 class="inline">Support and Consulting</h2>
+      <p class="mb-4">
         Usually Gitpod does not offer any integration, support and consulting
         services as part of the Service. Within its sole discretion Gitpod may
         offer support via email or in-Service communications as set forth in
         detail on the Website.
       </p>
-      <p>
+      <p class="mb-4">
         The Customer’s rights in case of defects of the Service remain
         unaffected.
       </p>
     </li>
-    <li>
-      <h2>Rights of Use and Licenses; Open Source</h2>
-      <p>
+    <li class="mb-4 my-small">
+      <h2 class="inline">Rights of Use and Licenses; Open Source</h2>
+      <p class="mb-4">
         We retain ownership of all intellectual property rights of any kind
         related to the Website and Service unless explicitly granted to you
         pursuant to this Agreement.
       </p>
-      <p>
+      <p class="mb-4">
         Upon successful registration for the Service and payment of Fees (as
         applicable) Gitpod hereby grants to Customer the worldwide,
         non-exclusive, non-sublicensable, non-transferable right to use the
         Service for the term and subject to the provisions of this Agreement.
         Customer accepts such grant of rights.
       </p>
-      <p>
+      <p class="mb-4">
         The Customer is aware that the Service contains open source components
         and such components are governed by the respective open source licenses.
       </p>
     </li>
-    <li>
-      <h2>Fees and Payment</h2>
-      <p>
+    <li class="mb-4 my-small">
+      <h2 class="inline">Fees and Payment</h2>
+      <p class="mb-4">
         Depending on the time of using the Service and subscription plan
         available on the Website chosen by Customer Gitpod demands from the
         Customer a fee for using its Service based on <strong
@@ -153,14 +168,14 @@
         such Fee shall be based on the current list shown on the Website or as
         provided to Customer in text form.
       </p>
-      <p>
+      <p class="mb-4">
         All prices for Customers that are Consumers (Section 13 BGB) do include
         the statutory VAT. All prices for Customers that are Entrepreneurs
         (Section 14 BGB) do not include statutory VAT and such Customer as
         Entrepreneur shall be solely responsible for any applicable taxes and
         related costs.
       </p>
-      <p>
+      <p class="mb-4">
         The Customer shall pay the Fee by using the payment methods set forth on
         the Website without any extra charge if Customer is a consumer (Section
         13 BGB). The currently valid prices are displayed before the respective
@@ -168,9 +183,9 @@
         arise for the Customer as Consumer when making a payment.
       </p>
     </li>
-    <li>
-      <h2>Availability</h2>
-      <p>
+    <li class="mb-4 my-small">
+      <h2 class="inline">Availability</h2>
+      <p class="mb-4">
         Our Services are generally available on the Website. Exceptions are:
         Back-up processes, system maintenance, system or database repair work,
         unavailability of the third party service for the Existing Account. We
@@ -178,15 +193,17 @@
         of defects remain unaffected.
       </p>
     </li>
-    <li>
-      <h2>Liability</h2>
-      <p>We are liable without limitation for</p>
-      <ol class="ol-alpha">
-        <li>
+    <li class="mb-4 my-small">
+      <h2 class="inline">Liability</h2>
+      <p class="mb-4">We are liable without limitation for</p>
+      <ol class="ol-alpha list-inside">
+        <li class="mb-4">
           damages caused deliberately or due to gross negligence by Gitpod;
         </li>
-        <li>damages arising out of death, injury to body or health;</li>
-        <li>
+        <li class="mb-4">
+          damages arising out of death, injury to body or health;
+        </li>
+        <li class="mb-4">
           damages due to a neglect of duty by Gitpod concerning essential
           contractual rights and obligations, which are absolutely necessary for
           a proper execution of the contract, and which might endanger the
@@ -194,38 +211,38 @@
           obligations). In that case, however, liability shall be limited to
           typical and foreseeable damages;
         </li>
-        <li>liability according to the Product Liability Act;</li>
-        <li>
+        <li class="mb-4">liability according to the Product Liability Act;</li>
+        <li class="mb-4">
           liability in case of a guarantee (without hereby giving such
           guarantee).
         </li>
       </ol>
-      <p>
+      <p class="mb-4">
         Any exemption from liability as well as limitations of liability of
         Gitpod shall also apply to the legal representatives and assistants of
         Gitpod.
       </p>
-      <p>
+      <p class="mb-4">
         No further liability for Gitpod exists. In particular, Gitpod is not
         liable for a failure or delay in rendering Service to the extent caused
         by circumstances beyond its reasonable control.
       </p>
-      <p>
+      <p class="mb-4">
         If Customer is an Entrepreneur the statutory provision shall apply and
         such Customer shall also be held responsible for all its legal
         representatives, assistants and any assigned users of the Service
         according to Section 278 BGB.
       </p>
     </li>
-    <li>
-      <h2>Warranty for Material Defects and Guarantees</h2>
-      <p>
+    <li class="mb-4 my-small">
+      <h2 class="inline">Warranty for Material Defects and Guarantees</h2>
+      <p class="mb-4">
         We are liable for material defects according to the valid legal
         regulations if the Customer is a Consumer. The limitation period begins
         with access to the Service. In such case the statutory warranty rules
         apply without restriction.
       </p>
-      <p>
+      <p class="mb-4">
         If the Customer is an Entrepreneur the following shall apply: The
         Customer shall check the contractual Service immediately upon receipt
         for obvious defects and inform us immediately if they are present,
@@ -236,20 +253,20 @@
         appearance of the defect as far as permitted by law. The limitation
         period begins with access to the Service.
       </p>
-      <p>
+      <p class="mb-4">
         We are not accountable for defects of Service or defects concerning the
         rights of Service in case the Service was supplied or provided without
         payment and the defects have not been left intentionally undisclosed.
       </p>
-      <p>
+      <p class="mb-4">
         We do not offer any guarantees for our Service without an expressly
         given confirmation.
       </p>
     </li>
-    <li>
-      <h2>Customer's General Obligations</h2>
-      <ol class="ol-decimal">
-        <li>
+    <li class="mb-4 my-small">
+      <h2 class="inline">Customer's General Obligations</h2>
+      <ol class="ol-decimal list-inside">
+        <li class="mb-4">
           <strong>True Data and Fair use:</strong> You must fill in all required
           fields in the sign-up sheet truthfully and completely. You must respect
           and abide these Terms of Service, especially the obligations for Fair and
@@ -257,19 +274,19 @@
           you create, post, upload or otherwise store, make available, or communicate
           in use of the Service.
         </li>
-        <li>
+        <li class="mb-4">
           <strong>Password and Security:</strong> You shall chose a safe password
           (we recommend at least 8 signs, including a letter, cypher and special
           character) for your account and change such password on a regular basis.
           You shall only pass such password information to authorized persons.
         </li>
-        <li>
+        <li class="mb-4">
           <strong>Defects and Bug reporting:</strong> You agree to support Gitpod
           in removing possible software defects by means such as bugs reporting or
           providing any information that can help us finding source of errors, if
           you have any available.
         </li>
-        <li>
+        <li class="mb-4">
           <strong>Backups:</strong> We do a regular backup of your data in the
           Service due to our legal obligations. However, you shall conduct
           regular backups of your data integrated in the Service via copying of
@@ -280,60 +297,62 @@
         </li>
       </ol>
     </li>
-    <li>
-      <h2 id="fair-use">Fair and Acceptable Use; Indemnification</h2>
-      <p>
+    <li class="mb-4 my-small">
+      <h2 id="fair-use" class="inline">
+        Fair and Acceptable Use; Indemnification
+      </h2>
+      <p class="mb-4">
         Gitpod Services are to be used for lawful software development, demoing,
         showcasing or debugging the resulting software and/or teaching software
         development. Your use of the Services must comply with general fair
         practices and you must, in particular, not nor allow others through your
         Gitpod account to:
       </p>
-      <ol class="ol-decimal">
-        <li>
+      <ol class="ol-decimal list-inside">
+        <li class="mb-4">
           breach any applicable laws, not limited to a specific jurisdiction;
         </li>
-        <li>
+        <li class="mb-4">
           post, host, upload, communicate or transmit content that is unlawful,
           sexually obscene, discriminatory, abusive, libelous, defamatory,
           fraudulent, harassing, threatening or infringes proprietary rights of
           any third party or us;
         </li>
-        <li>
+        <li class="mb-4">
           distribute any malware or other deceitful or destructive content,
           including, but not limited to viruses, worms, Trojan horses, exploits,
           or corrupted files, distribution of unsolicited mass communications,
           advertising or solicitation;
         </li>
-        <li>conduct illegal activities or their promotion;</li>
-        <li>
+        <li class="mb-4">conduct illegal activities or their promotion;</li>
+        <li class="mb-4">
           interfere or tamper with, violate, disable, impede or circumvent any
           part of the Service of GitPod and the equipment and services used by
           GitPod to provide them;
         </li>
-        <li>attack or break into computer systems;</li>
-        <li>
+        <li class="mb-4">attack or break into computer systems;</li>
+        <li class="mb-4">
           abuse, scan other computer systems or networks, or place immoderate
           burden on any computing resources or systems;
         </li>
-        <li>
+        <li class="mb-4">
           conduct or participate in any manner in peer-to-peer file sharing
           activity;
         </li>
-        <li>
+        <li class="mb-4">
           engage in number crunching, data mining, cryptocurrency mining or
           similar schemes;
         </li>
-        <li>
+        <li class="mb-4">
           make any use or failure thereof which could lead to, create, increase
           risk of, death, physical injury or health or environmental damage;
         </li>
-        <li>
+        <li class="mb-4">
           any other activity which can reasonably be deemed an unfair use of the
           Services.
         </li>
       </ol>
-      <p>
+      <p class="mb-4">
         Gitpod workspaces allow you to interact online with other people,
         computer networks and computer systems. You are solely responsible for
         this interaction and especially any problems, material or immaterial
@@ -348,9 +367,9 @@
         >
       </p>
     </li>
-    <li>
-      <h2>Customer Data; Indemnification</h2>
-      <p>
+    <li class="mb-4 my-small">
+      <h2 class="inline">Customer Data; Indemnification</h2>
+      <p class="mb-4">
         The Customer has the possibility within his account to upload content
         and code, including but not limited to programs, technical data,
         personal data (<strong>"Customer Data"</strong>). The Customer is solely
@@ -363,14 +382,14 @@
         corresponding data accessible on the Website displaying them in the
         Customer’s account. Gitpod hereby accepts this granting of rights.
       </p>
-      <p>
+      <p class="mb-4">
         In the event that Customer Data is removed from an account or that an
         account is/was deleted by the Customer or by us for whatever reason, the
         rights to such Customer Data shall expire, except for legal retention
         periods and the Customer’s statutory rights for a backup of such
         Customer Data.
       </p>
-      <p>
+      <p class="mb-4">
         Customer is solely responsible for such Customer Data, especially any
         copyrights, data protection requirements, problems, material or
         immaterial damage these Customer Data might cause. <strong
@@ -383,20 +402,20 @@
         >
       </p>
     </li>
-    <li>
-      <h2>Blocking Rights</h2>
-      <p>
+    <li class="mb-4 my-small">
+      <h2 class="inline">Blocking Rights</h2>
+      <p class="mb-4">
         In addition to our termination rights, we have the right to the
         following blocking measures:
       </p>
-      <ol class="ol-decimal">
-        <li>
+      <ol class="ol-decimal list-inside">
+        <li class="mb-4">
           In case a Customer is in breach of Section I. or a reasonable
           suspicion thereon considering the reasonable interests of the Customer
           temporarily suspend providing the entire or any part of the Service to
           the Customer; and/or
         </li>
-        <li>
+        <li class="mb-4">
           In case the Customer Data (i) violate applicable laws or are subject
           to illegal activities each to the knowledge of Gitpod, or (ii) harm or
           affect the provision of the Service, related services and networks or
@@ -405,23 +424,23 @@
           software or other Customer Data.
         </li>
       </ol>
-      <p>
+      <p class="mb-4">
         We will inform the Customer of such blocking measures set forth above
         without hesitation.
       </p>
-      <p>
+      <p class="mb-4">
         We may also disclose your personal data vis-&agrave;-vis authorities as
         set forth in the <a href="/privacy">privacy policy </a>.
       </p>
     </li>
-    <li>
-      <h2>L. Right of Withdrawal and Dispute Resolution</h2>
-      <p>
+    <li class="mb-4 my-small">
+      <h2 class="inline">L. Right of Withdrawal and Dispute Resolution</h2>
+      <p class="mb-4">
         The following provisions of this Section L. shall only apply to
         Consumers.
       </p>
       <h3>Right of Withdrawal</h3>
-      <p>
+      <p class="mb-4">
         If you are a Consumer, you have the right of withdrawal in accordance
         with the statutory provisions. In all respects the regulations, which
         are given in detail in the following instruction on withdrawal, apply to
@@ -431,30 +450,30 @@
       <div>
         <div>-- begin instruction on withdrawal --</div>
         <h4>Right of Withdrawal</h4>
-        <p>
+        <p class="mb-4">
           You have the right to withdraw from this contract within 14 days
           without giving any reason. The withdrawal period will expire 14 days
           from the day of the conclusion of the contract. To exercise the right
           of withdrawal, you must inform us to:
         </p>
-        <p>
+        <p class="mb-4">
           Gitpod GmbH<br /> represented by: Sven Efftinge, Moritz Eysholdt, Dr.
           Jan K&ouml;hnlein<br /> Am Germaniahafen 1<br /> 24143 Kiel/Germany<br
           /> Email: contact@gitpod.io
         </p>
-        <p>
+        <p class="mb-4">
           of your decision to withdraw from this contract by an unequivocal
           statement (e.g. a letter sent by post, fax or e-mail). You may use the
           attached <a href="#withdrawal-form">model withdrawal form</a>, but it
           is not obligatory.
         </p>
-        <p>
+        <p class="mb-4">
           To meet the withdrawal deadline, it is sufficient for you to send your
           communication concerning your exercise of the right of withdrawal
           before the withdrawal period has expired.
         </p>
         <h4>Effects of Withdrawal</h4>
-        <p>
+        <p class="mb-4">
           If you withdraw from this contract, we shall reimburse to you all
           payments received from you, including the costs of delivery (with the
           exception of the supplementary costs resulting from your choice of a
@@ -467,14 +486,14 @@
           any event, you will not incur any fees as a result of such
           reimbursement.
         </p>
-        <p>
+        <p class="mb-4">
           If you requested to begin the performance of services during the
           withdrawal period, you shall pay us an amount which is in proportion
           to what has been provided until you have communicated us your
           withdrawal from this contract, in comparison with the full coverage of
           the contract.
         </p>
-        <p>
+        <p class="mb-4">
           Your right to withdraw from this Agreement expires prematurely if the
           Services were initiated by us to you only after you as Consumer have
           expressly agreed that we shall commence with the execution of the
@@ -487,7 +506,7 @@
       </div>
 
       <h3>Alternative Settlements of Disputes</h3>
-      <p>
+      <p class="mb-4">
         The European Commission provides a platform for an online settlement of
         disputes which can be accessed under http://ec.europa.eu/consumers/odr/.
         Gitpod is neither obliged to take part in alternative dispute
@@ -495,16 +514,16 @@
         so voluntarily.
       </p>
     </li>
-    <li>
-      <h2>Term and Termination</h2>
-      <p>
+    <li class="mb-4 my-small">
+      <h2 class="inline">Term and Termination</h2>
+      <p class="mb-4">
         This Agreement is effective as of your creation of the Gitpod account
         and remains effective until terminated. You as Customer or Gitpod may
         each terminate this Agreement without reason by giving a 15-day notice
         using the termination option in the Gitpod account or as for Gitpod via
         email to Customer.
       </p>
-      <p>
+      <p class="mb-4">
         In addition, you as Customer or Gitpod can terminate this Agreement with
         immediate effect for good cause (wichtiger Grund). Good cause <em
           >(wichtiger Grund)</em
@@ -519,25 +538,25 @@
         to supply its Service occur; or (vi) Gitpod Service is terminated due to
         reasons beyond Gitpod’s control or as a whole.
       </p>
-      <p>
+      <p class="mb-4">
         Upon termination, regulations concerning Liability (Section F.),
         Warranty of Material Defects and Guarantee (Section G.), Term (Section
         M.), Confidentiality (Section O.) and Miscellaneous (Section Q.) shall
         survive.
       </p>
     </li>
-    <li>
-      <h2>Privacy and Data</h2>
-      <p>
+    <li class="mb-4 my-small">
+      <h2 class="inline">Privacy and Data</h2>
+      <p class="mb-4">
         We will process your data according to the German and European data
         protection laws. For details please refer to our <a href="/privacy"
           >privacy policy
         </a>.
       </p>
     </li>
-    <li>
-      <h2>Confidentiality</h2>
-      <p>
+    <li class="mb-4 my-small">
+      <h2 class="inline">Confidentiality</h2>
+      <p class="mb-4">
         Both Customer and Gitpod agree not to, and shall ensure that their
         employees, agents and advisors do not, disclose to third parties, nor
         use for any purpose other than as contemplated in these Terms of Service
@@ -563,9 +582,9 @@
         party about the requirement or respectively the request for disclosure.
       </p>
     </li>
-    <li>
-      <h2>Terms of Service Changes</h2>
-      <p>
+    <li class="mb-4 my-small">
+      <h2 class="inline">Terms of Service Changes</h2>
+      <p class="mb-4">
         We may change these Terms of Service as well as related documentation at
         any time at our sole discretion. We will inform you at least in text
         form that the Terms of Service as well as related documentation have
@@ -579,14 +598,14 @@
         conditions shall remain in force.
       </p>
     </li>
-    <li>
-      <h2>Miscellaneous</h2>
-      <p>
+    <li class="mb-4 my-small">
+      <h2 class="inline">Miscellaneous</h2>
+      <p class="mb-4">
         You are not allowed to assign, transfer or delegate these Terms of
         Service to any person or entity at any time given, except for certain
         rights as explicitly set forth in these Terms of Service.
       </p>
-      <p>
+      <p class="mb-4">
         This Agreement is governed by the laws of the Federal Republic of
         Germany, to the exclusion of the Convention of the United Nations on
         Contracts for the International Sale of Goods. Any statutory provisions
@@ -598,14 +617,14 @@
         compatible with the law the exclusive jurisdiction and venue shall be
         the seat of Gitpod.
       </p>
-      <p>
+      <p class="mb-4">
         These Terms of Service and the documents referred hereto jointly
         constitute the whole Agreement between the Gitpod and Customer and
         precede any other agreement, arrangement, proposal or communication.
         Gitpod does not waive any rights under this Agreement by not exercising
         or delaying to exercise these rights.
       </p>
-      <p>
+      <p class="mb-4">
         In case individual provisions in these terms and conditions including
         this provision are or become invalid, or in case of gaps arising in
         these terms and conditions, the validity of all other provisions will
@@ -616,10 +635,10 @@
         ineffective as a whole.
       </p>
 
-      <h2>Transfer of the Agreement to Another Party</h2>
-      <p>You agree that we may transfer this Agreement to:</p>
-      <ol class="ol-decimal">
-        <li>
+      <h2 class="inline">Transfer of the Agreement to Another Party</h2>
+      <p class="mb-4">You agree that we may transfer this Agreement to:</p>
+      <ol class="ol-decimal list-inside">
+        <li class="mb-4">
           <strong>Gitpod, Inc.</strong>, a corporation incorporated and validly
           existing under the laws of the State of Delaware, United States,
           registered with the Division of Corporations of the State of Delaware
@@ -628,20 +647,20 @@
             >Gitpod, Inc.</strong
           >"); or
         </li>
-        <li>
+        <li class="mb-4">
           another third-party designated in our discretion ("<strong
             >Third-Party</strong
           >")
         </li>
       </ol>
-      <p>
+      <p class="mb-4">
         by way of a transfer of contract with discharging effect
         (Vertragsübernahme mit schuldbefreiender Wirkung) with the effect that
         Gitpod, Inc. or the Third-Party becomes your new contractual partner in
         our stead and assumes all our rights and obligations under this
         Agreement.
       </p>
-      <p>
+      <p class="mb-4">
         We will notify you of a contemplated transfer of this Agreement and
         provide you with the identity of your new contractual partner in text
         form with at least four three weeks' notice prior to the contemplated
@@ -649,14 +668,14 @@
           >Transfer Notice</strong
         >").
       </p>
-      <p>
+      <p class="mb-4">
         In case of a contemplated transfer of this Agreement to a Third-Party
         you shall be entitled to terminate this Agreement without notice and
         without any additional cause being required. This termination right must
         be exercised within six weeks following receipt of the Transfer Notice
         and must be exercised in text form.
       </p>
-      <p>
+      <p class="mb-4">
         The above termination right shall not exist in case of a transfer of
         this Agreement to Gitpod, Inc. Other rights you may have to terminate
         the Agreement with or without cause shall remain unaffected.
@@ -664,30 +683,32 @@
     </li>
   </ol>
   <h2 id="withdrawal-form">Appendix: Model Withdrawal Form</h2>
-  <p>
+  <p class="mb-4">
     Complete and return this form only if you wish to withdraw from the
     contract.
   </p>
 
   <div class="card">
     <div>-- begin model withdrawal form --</div>
-    <p>
+    <p class="mb-4">
       To<br /> Gitpod GmbH represented by: Sven Efftinge, Moritz Eysholdt, Dr.
       Jan Köhnlein<br /> Am Germaniahafen 1<br /> 24143 Kiel/Germany
       <br /> Phone: +49-431-99026870<br /> Email: contact@gitpod.io<br />
     </p>
-    <p />
-    <p>
+    <p class="mb-4" />
+    <p class="mb-4">
       I/We (*) hereby give notice that I/We (*) withdraw from my/our (*) for the
       provision of the following service (*),
     </p>
-    <p>Ordered on (*)/received on (*),</p>
-    <p>Name of consumer(s),</p>
-    <p>Address of consumer(s),</p>
-    <p>Signature of consumer(s) (only if this form is notified on paper),</p>
-    <p>Date</p>
-    <p>_______________</p>
-    <p>(*) Delete where inapplicable.</p>
+    <p class="mb-4">Ordered on (*)/received on (*),</p>
+    <p class="mb-4">Name of consumer(s),</p>
+    <p class="mb-4">Address of consumer(s),</p>
+    <p class="mb-4">
+      Signature of consumer(s) (only if this form is notified on paper),
+    </p>
+    <p class="mb-4">Date</p>
+    <p class="mb-4">_______________</p>
+    <p class="mb-4">(*) Delete where inapplicable.</p>
     <div>-- end model withdrawal form --</div>
   </div>
 </article>

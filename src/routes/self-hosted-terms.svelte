@@ -6,9 +6,19 @@
   import OpenGraph from "$lib/components/open-graph.svelte";
 </script>
 
-<style>
+<style lang="postcss">
   ol li::marker {
     content: counters(list-item, ".") ". ";
+  }
+  :is(ol.toc, ul) > li::marker {
+    @apply text-h3 font-bold;
+  }
+  ol.toc > li::marker {
+    @apply text-inherit;
+  }
+
+  ::marker {
+    @apply text-orange-800;
   }
 </style>
 
@@ -18,16 +28,16 @@
     title: "Self-Hosted Terms",
   }}
 />
-<article class="text-blob">
+<article class="max-w-[94vw] mt-20 mx-auto mb-8 leading-7 lg:w-[50rem]">
   <h1>
     Gitpod Self-Hosted Free License Terms and Gitpod Enterprise Source Code
     License
   </h1>
-  <ol class="toc ol-decimal">
-    <li>
-      <h2>Preamble</h2>
-      <ol class="ol-decimal">
-        <li>
+  <ol class="toc ol-decimal list-inside">
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline">Preamble</h2>
+      <ol class="ol-decimal list-inside">
+        <li class="mb-4">
           These Software Licensing Terms (“Terms”) provide the terms and
           conditions that govern usage of the Software Gitpod Self-Hosted Free
           Edition in source and binary form (“Software”). The Software is
@@ -37,33 +47,33 @@
         </li>
       </ol>
     </li>
-    <li>
-      <h2>Scope of Terms</h2>
-      <ol>
-        <li>
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline">Scope of Terms</h2>
+      <ol class="list-inside">
+        <li class="mb-4">
           These Terms apply to the usage of the Software, which is designed to
           be used for business purposes.
         </li>
-        <li>
+        <li class="mb-4">
           These Terms apply to the binary code and to the source code of the
           Software, unless the header of a source file explicitly refers to a
           different license.
         </li>
-        <li>
+        <li class="mb-4">
           These Terms apply unless you have a separate agreement with Gitpod in
           written form that explicitly supersedes these Terms.
         </li>
       </ol>
     </li>
-    <li>
-      <h2>License Fees</h2>
-      <ol>
-        <li>
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline">License Fees</h2>
+      <ol class="list-inside">
+        <li class="mb-4">
           The use of the Software as described in Sec. 2 is free of charge. It
           is however limited to the features that are accessible without a
           license key and may only take place in accordance with these Terms.
         </li>
-        <li>
+        <li class="mb-4">
           In case you want to use additional features or distribute the Software
           or modifications to it without the restrictions of these Terms, please
           reach out for a license key, which is subject to different legal and
@@ -71,16 +81,16 @@
         </li>
       </ol>
     </li>
-    <li>
-      <h2>Granting of Rights</h2>
-      <ol>
-        <li>
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline">Granting of Rights</h2>
+      <ol class="list-inside">
+        <li class="mb-4">
           Permission is hereby granted to obtain a copy of the Software and
           their accompanying documentation to use, reproduce and execute the
           Software for internal purposes in accordance with these Terms and to
           distribute the unmodified software without charging a fee for it.
         </li>
-        <li>
+        <li class="mb-4">
           Subject to the conditions of these Terms, you may modify the Software,
           including patching it. You agree that Gitpod retains all right, title
           and interest in and to all such modifications and patches
@@ -92,7 +102,7 @@
           only under these Terms and only, if accompanied by the complete
           machine-readable source code of the Modifications and of the Software.
         </li>
-        <li>
+        <li class="mb-4">
           The copyright notices in the Software and this entire statement,
           including the above license grant and these Terms must be included in
           all copies of the Software (in whole or in part). Copyright notices,
@@ -103,7 +113,7 @@
           activate any features of the software that would otherwise require a
           valid license key.
         </li>
-        <li>
+        <li class="mb-4">
           Any other usage of the Software, in particular modifying, combining it
           with other software and providing it to third parties on a commercial
           basis, is prohibited. This includes any sale, lease, indirect use of
@@ -111,26 +121,26 @@
           commercial service, or offering it as a part of a commercial service
           or platform.
         </li>
-        <li>
+        <li class="mb-4">
           The Software remains the exclusive intellectual property of Gitpod at
           all times. Mandatory rights resulting from applicable copyright law
           (e.g. related to decompilation) remain unaffected.
         </li>
-        <li>
+        <li class="mb-4">
           Gitpod provides the source code of the Software on a voluntary basis
           and is not obligated to do so. Furthermore, Gitpod is not obligated to
           provide any updates or upgrades it may develop.
         </li>
-        <li>
+        <li class="mb-4">
           Please consider purchasing a license key (see above Sec. 3) for
           further usage rights and additional features.
         </li>
       </ol>
     </li>
-    <li>
-      <h2>Telemetry</h2>
-      <ol>
-        <li>
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline">Telemetry</h2>
+      <ol class="list-inside">
+        <li class="mb-4">
           Gitpod intends to collect certain statistical data on the use of the
           Software on an anonymized basis in the future with a future version of
           the Software. The data will only be used to improve the Software and
@@ -139,32 +149,32 @@
         </li>
       </ol>
     </li>
-    <li>
-      <h2>Warranty and Liability</h2>
-      <ol>
-        <li>
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline">Warranty and Liability</h2>
+      <ol class="list-inside">
+        <li class="mb-4">
           THE SOFTWARE IS PROVIDED FREE OF CHARGE ON AN “AS IS” BASIS, WITHOUT
           WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
           THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
           TITLE AND NON-INFRINGEMENT.
         </li>
-        <li>
+        <li class="mb-4">
           IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE
           SOFTWARE BE LIABLE FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN
           CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
           WITH THE SOFTWARE OR THE USE OF OR OTHER DEALINGS IN THE SOFTWARE.
         </li>
-        <li>
+        <li class="mb-4">
           THIS LIMITATION OF LIABILITY DOES NOT EXCLUDE MANDATORY LEGAL GROUNDS
           FOR LIABILITY SUCH AS LIABILITY FOR PERSONAL INJURY, GROSS NEGLIGENCE,
           WILLFUL INTENT OR LAWS ON PRODUCT LIABILITY.
         </li>
       </ol>
     </li>
-    <li>
-      <h2>Third-party Components</h2>
-      <ol>
-        <li>
+    <li class="mb-4 my-small">
+      <h2 class="mx-0 my-4 inline">Third-party Components</h2>
+      <ol class="list-inside">
+        <li class="mb-4">
           The Software contains third-party components including open source
           software (“Third-Party Components“). Parts of such Third-Party
           Components are subject to deviating license terms (“Third-Party
@@ -175,7 +185,7 @@
           on your use of such Third-Party Components licensed under Third-Party
           License Terms.
         </li>
-        <li>
+        <li class="mb-4">
           Gitpod reserves the right to introduce deviating or additional
           Third-Party License Terms in the course of modifications of the
           Software and in case of updates for the Software to the extent
