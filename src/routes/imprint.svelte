@@ -46,7 +46,7 @@
     <b>§ 55 Rundfunkstaatsvertrag (RSTV)</b>:
   </p>
   <p class="mb-4">Sven Efftinge,&nbsp;Hofteichstr.7,&nbsp;24113 Kiel</p>
-  <h2 class="mx-0 my-4 inline">Disclaimer</h2>
+  <h2 class="mx-0 my-8">Disclaimer</h2>
   <h3 class="mx-0 my-4">Liability for content</h3>
   <p class="mb-4">
     As a service provider we are responsible according to § 7 paragraph 1 of TMG

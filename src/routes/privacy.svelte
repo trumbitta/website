@@ -81,10 +81,10 @@
       href="mailto:data@gitpod.io">data@gitpod.io</a
     >.
   </p>
-  <h2 class="mx-0 my-4" id="short">In Short</h2>
+  <h2 class="mx-0 my-8" id="short">In Short</h2>
 
-  <ul class="pl-xx-small md:pl-x-small">
-    <li class="mb-4">
+  <ul class="pl-xx-small md:pl-x-small space-y-4 mb-4">
+    <li>
       <h3 class="mx-0 my-4">Controller</h3>
       <p class="mb-4">
         Gitpod GmbH, am Germaniahafen 1, 24143 Kiel/Germany, registered with the
@@ -103,27 +103,25 @@
         This privacy policy also contains further data controllers.
       </p>
     </li>
-    <li class="mb-4">
+    <li>
       <h3 class="mx-0 my-4">
         Purpose and Legal Basis of Processing Data; Provision and Recipients of
         Data
       </h3>
       <p class="mb-4">Your data will be used for the following purposes:</p>
-      <ul class="pl-xx-small md:pl-x-small">
-        <li class="mb-4">to provide the functioning Website,</li>
-        <li class="mb-4">
+      <ul class="pl-xx-small md:pl-x-small space-y-4 mb-4">
+        <li>to provide the functioning Website,</li>
+        <li>
           to implement this privacy policy and carrying out the contractual
           relationship and our Service,
         </li>
-        <li class="mb-4">to analyze how our Service is used and improve it,</li>
-        <li class="mb-4">to detect and prevent fraudulent or abusive use,</li>
-        <li class="mb-4">to provide and analyze our pages on Social Media,</li>
-        <li class="mb-4">to send you important updates about our service,</li>
-        <li class="mb-4">
-          to send you marketing content, including newsletters,
-        </li>
-        <li class="mb-4">to act according to our legal obligations, or</li>
-        <li class="mb-4">
+        <li>to analyze how our Service is used and improve it,</li>
+        <li>to detect and prevent fraudulent or abusive use,</li>
+        <li>to provide and analyze our pages on Social Media,</li>
+        <li>to send you important updates about our service,</li>
+        <li>to send you marketing content, including newsletters,</li>
+        <li>to act according to our legal obligations, or</li>
+        <li>
           as otherwise explained in this privacy policy or by any communication
           by us.
         </li>
@@ -149,7 +147,7 @@
         for example, limited or no possibility of using our Service.
       </p>
     </li>
-    <li class="mb-4">
+    <li>
       <h3 class="mx-0 my-4">Transfer of Data outside of the EU</h3>
       <p class="mb-4">
         In course of data processing by us data may be transferred to third
@@ -158,7 +156,7 @@
         external service partners which process data on our behalf.
       </p>
     </li>
-    <li class="mb-4">
+    <li>
       <h3 class="mx-0 my-4">Your Rights</h3>
       <p class="mb-4">
         You have the right to withdraw your consent relating to the use of data
@@ -191,14 +189,14 @@
         ><br />
       </p>
     </li>
-    <li class="mb-4">
+    <li>
       <h3 class="mx-0 my-4">Period for Storing Data; Deletion</h3>
       <p class="mb-4">
         The data are deleted if such data are no longer necessary for the
         purpose of processing.
       </p>
     </li>
-    <li class="mb-4">
+    <li>
       <h3 class="mx-0 my-4">Data Security</h3>
       <p class="mb-4">
         We have implemented measures to ensure data and IT security. The Website
@@ -209,50 +207,50 @@
     </li>
   </ul>
 
-  <h2 class="mx-0 my-4" id="detailed">More Detailed Information</h2>
+  <h2 class="mx-0 my-8" id="detailed">More Detailed Information</h2>
 
-  <ol class="ol-roman list-inside">
-    <li class="mb-4"><a href="#details-I">What are Personal Data?</a></li>
-    <li class="mb-4">
+  <ol class="ol-roman list-inside space-y-4 mb-4">
+    <li><a href="#details-I">What are Personal Data?</a></li>
+    <li>
       <a href="#details-II"
         >How are my Data processed when visiting the Website and contacting us?</a
       >
     </li>
-    <li class="mb-4">
+    <li>
       <a href="#details-III"
         >What Third Party Services, Cookies, Analytics and Social Plugins does
         the Website use?</a
       >
     </li>
-    <li class="mb-4">
+    <li>
       <a href="#details-IV"
         >How are my data processed when using the Gitpod Service (with User
         Account)?</a
       >
     </li>
-    <li class="mb-4">
+    <li>
       <a href="#details-V"
         >How are Data processed when visiting our Social Media pages?</a
       >
     </li>
-    <li class="mb-4">
+    <li>
       <a href="#details-VI"
         >Are my Data transferred to Third Parties? Does automated decision
         making including profiling take place?</a
       >
     </li>
-    <li class="mb-4">
+    <li>
       <a href="#details-VII">Are my Data transferred outside the EU?</a>
     </li>
-    <li class="mb-4"><a href="#details-VIII">Your Rights</a></li>
-    <li class="mb-4">
+    <li><a href="#details-VIII">Your Rights</a></li>
+    <li>
       <a href="#details-IX"
         >Duration of Storing your Data; Data Security; Access and Changes to
         this Privacy Policy; Contact Details</a
       >
     </li>
   </ol>
-  <ol class="toc ol-roman list-inside">
+  <ol class="toc ol-roman list-inside space-y-4 mb-4">
     <li class="mb-4 my-small">
       <h2 class="mx-0 my-4 inline" id="details-I">What are Personal Data?</h2>
       <p class="mb-4 mt-x-small">
@@ -621,13 +619,13 @@
         Further information about data processing and privacy practices of
         YouTube and Google can be found here:
       </p>
-      <ul class="pl-xx-small md:pl-x-small">
-        <li class="mb-4">
+      <ul class="pl-xx-small md:pl-x-small space-y-4 mb-4">
+        <li>
           <a href="https://policies.google.com/privacy"
             >https://policies.google.com/privacy</a
           >
         </li>
-        <li class="mb-4">
+        <li>
           <a href="https://support.google.com/youtube/answer/171780?hl=e"
             >https://support.google.com/youtube/answer/171780?hl=e</a
           >
@@ -773,51 +771,51 @@
         How are Data processed when visiting our Social Media pages?
       </h2>
       <p class="mb-4">We operate pages on</p>
-      <ul class="pl-xx-small md:pl-x-small">
-        <li class="mb-4">
+      <ul class="pl-xx-small md:pl-x-small space-y-4 mb-4">
+        <li>
           Twitter (twitter.com or applications) by Twitter Inc., 1355 Market
           Street, Suite 900, San Francisco, CA 94103, USA, please also refer to:
           <ul class="pl-xx-small md:pl-x-small">
-            <li class="mb-4">
+            <li>
               <a href="https://twitter.com/de/privacy"
                 >https://twitter.com/de/privacy</a
               >
             </li>
-            <li class="mb-4">
+            <li>
               <a href="https://twitter.com/personalization"
                 >https://twitter.com/personalization</a
               >
             </li>
           </ul>
         </li>
-        <li class="mb-4">
+        <li>
           Medium (medium.com or applications) by A Medium Corporation, 799
           Market Street, 5th Floor, San Francisco, CA 94103, USA, please also
           refer to:
           <ul class="pl-xx-small md:pl-x-small">
-            <li class="mb-4">
+            <li>
               <a
                 href="https://policy.medium.com/medium-privacy-policy-f03bf92035c9"
                 >https://policy.medium.com/medium-privacy-policy-f03bf92035c9</a
               >
             </li>
-            <li class="mb-4">
+            <li>
               <a href="https://medium.com/me/settings"
                 >https://medium.com/me/settings</a
               >
             </li>
-            <li class="mb-4">
+            <li>
               <a href="https://medium.com/me/following/suggestions"
                 >https://medium.com/me/following/suggestions</a
               >
             </li>
           </ul>
         </li>
-        <li class="mb-4">
+        <li>
           Spectrum Chat (spectrum.chat or applications) by GitHub Inc., 88 Colin
           P Kelly Jr St, San Francisco, CA 94107, USA, please also refer to:
           <ul class="pl-xx-small md:pl-x-small">
-            <li class="mb-4">
+            <li>
               <a href="https://spectrum.chat/privacy.html"
                 >https://spectrum.chat/privacy.html</a
               >
@@ -999,36 +997,36 @@
 
       <p class="mb-4"><strong>As a data subject you have the right:</strong></p>
       <ul class="pl-xx-small md:pl-x-small">
-        <li class="mb-4">
+        <li>
           to withdraw your consent to us at any time. As a result, we are no
           longer allowed to continue the processing of data based on this
           consent in the future;
         </li>
-        <li class="mb-4">
+        <li>
           to object to the processing of your personal data, if your personal
           data are processed on the basis of legitimate interests pursuant to
           Art. 6 (1) f. GDPR insofar as there are reasons for this arising from
           your particular situation;
         </li>
-        <li class="mb-4">to obtain from us access to your personal data;</li>
-        <li class="mb-4">
+        <li>to obtain from us access to your personal data;</li>
+        <li>
           to obtain from us without undue delay the rectification of inaccurate
           personal data concerning you;
         </li>
-        <li class="mb-4">
+        <li>
           to obtain the erasure of your personal data stored with us, unless the
           processing is necessary to exercise the right to free expression of
           opinion and information, to fulfill a legal obligation, for reasons of
           public interest or to assert, exercise or defend legal claims;
         </li>
-        <li class="mb-4">
+        <li>
           to demand the restriction of the processing of your personal data, if
           the accuracy of the data is disputed by you, the processing is
           unlawful, but you refuse its deletion and we no longer need the data,
           but you need it to assert, exercise or defend legal claims or you have
           filed an objection against the processing; and
         </li>
-        <li class="mb-4">
+        <li>
           to receive your personal data, which you have provided to us, in a
           structured, current and machine-readable format or to request the
           transmission to another controller.
