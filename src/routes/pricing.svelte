@@ -11,6 +11,7 @@
   import UsedBy from "$lib/components/index/used-by.svelte";
   import Empower from "$lib/components/pricing/empower.svelte";
   import CompareFeatures from "$lib/components/pricing/compare-features.svelte";
+  import FeatureTable from "$lib/components/ui-library/feature-table/feature-table.svelte";
 </script>
 
 <OpenGraph
@@ -27,3 +28,6 @@
 <Faqs />
 
 <Explore />
+<div class="mb-4">
+  <FeatureTable />
+</div>
