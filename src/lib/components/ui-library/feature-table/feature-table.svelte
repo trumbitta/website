@@ -7,19 +7,19 @@
   <FeatureTableToc />
   <FeatureTableColumn>
     <div class="text-center" slot="header">
-      <h2>Free Plan</h2>
+      <h3>Free Plan</h3>
       <p>€0 per user/month</p>
     </div>
   </FeatureTableColumn>
   <FeatureTableColumn>
     <div class="text-center" slot="header">
-      <h2>Free Plan</h2>
+      <h3>Free Plan</h3>
       <p>€0 per user/month</p>
     </div>
   </FeatureTableColumn>
   <FeatureTableColumn>
     <div class="text-center" slot="header">
-      <h2>Free Plan</h2>
+      <h3>Free Plan</h3>
       <p>€0 per user/month</p>
     </div>
   </FeatureTableColumn>

@@ -8,3 +8,10 @@ export type tocItem = {
     alt: string;
   };
 };
+
+export type FeatureItemDetail = {
+  term: string;
+  list?: string[];
+  text?: string;
+  availability?: boolean;
+};
