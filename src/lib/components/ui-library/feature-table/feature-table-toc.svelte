@@ -4,7 +4,10 @@
 </script>
 
 <div id="toc" class="p-4">
-  <FeatureTableHeader />
+  <FeatureTableHeader
+    isToc={true}
+    headerData={{ headline: "Professional", subtitle: "€23 per user/month" }}
+  />
   <section class="grid grid-cols-1 auto-rows-[3.75rem] pt-4">
     <FeatureTableTocItem
       type="image"

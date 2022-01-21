@@ -4,9 +4,9 @@
 </script>
 
 <div class="p-4 bg-[#f9f9f9] shadow-xl rounded-3xl">
-  <FeatureTableHeader>
-    <slot name="header" />
-  </FeatureTableHeader>
+  <FeatureTableHeader
+    headerData={{ headline: "Professional", subtitle: "€23 per user/month" }}
+  />
   <section
     class="grid grid-cols-1 auto-rows-[3.75rem] border-t-2 border-divider pt-4 "
   >
