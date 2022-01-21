@@ -12,6 +12,7 @@
   import Empower from "$lib/components/pricing/empower.svelte";
   import CompareFeatures from "$lib/components/pricing/compare-features.svelte";
   import FeatureTable from "$lib/components/ui-library/feature-table/feature-table.svelte";
+  import { pricingTable } from "$lib/components/ui-library/feature-table/pricing.data";
 </script>
 
 <OpenGraph
@@ -29,5 +30,5 @@
 
 <Explore />
 <div class="mb-4">
-  <FeatureTable />
+  <FeatureTable tableData={pricingTable} />
 </div>

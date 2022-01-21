@@ -1,6 +1,6 @@
-export type TocItemType = "text" | "tooltip" | "image";
+export type FeatureTocItemType = "text" | "tooltip" | "image";
 
-export type TocItem = {
+export type FeatureTocItem = {
   text: string;
   tooltip?: string;
   image?: FeatureImage;
@@ -29,7 +29,12 @@ export type FeatureTableColumn = {
   items: FeatureItemDetail[];
 };
 
+export type FeatureTableToc = {
+  type: FeatureTocItemType;
+  data: FeatureTocItem;
+};
+
 export type FeatureTable = {
-  toc: TocItem[];
+  toc: FeatureTableToc[];
   columns: FeatureTableColumn[];
 };
