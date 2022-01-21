@@ -2,7 +2,7 @@
   import type { FeatureTableHeader } from "./feature-table.types";
 
   export let isToc: boolean = false;
-  export let headerData: FeatureTableHeader;
+  export let headerData: FeatureTableHeader = { headline: "" };
 </script>
 
 <div class="h-36 flex flex-col justify-center items-center">

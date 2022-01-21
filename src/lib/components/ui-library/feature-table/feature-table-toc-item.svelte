@@ -1,8 +1,8 @@
 <script lang="ts">
   import QaTooltip from "../../qa-tooltip.svelte";
-  import type { tocItem, tocItemType } from "./feature-table.types";
-  export let type: tocItemType;
-  export let definition: tocItem;
+  import type { TocItem, TocItemType } from "./feature-table.types";
+  export let type: TocItemType;
+  export let definition: TocItem;
 </script>
 
 <div class="flex items-center">
