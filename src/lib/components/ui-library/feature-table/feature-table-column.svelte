@@ -12,7 +12,5 @@
     <div class="flex items-center justify-center">Free</div>
     <div class="flex items-center justify-center">Free</div>
     <div class="flex items-center justify-center">Free</div>
-    <div class="flex items-center justify-center">Free</div>
-    <div class="flex items-center justify-center">Free</div>
   </section>
 </div>

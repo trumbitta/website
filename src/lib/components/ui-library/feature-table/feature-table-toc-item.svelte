@@ -1,5 +1,23 @@
 <script lang="ts">
-  export let value: string;
+  import QaTooltip from "../../qa-tooltip.svelte";
+  import type { tocItem, tocItemType } from "./feature-table.types";
+  export let type: tocItemType;
+  export let definition: tocItem;
 </script>
 
-<div class="flex items-center justify-start">{value}</div>
+<div class="flex items-center">
+  {#if type === "tooltip"}
+    <QaTooltip text={definition.text} tooltip={definition.tooltip} />
+  {/if}
+  {#if type === "text"}
+    {definition.text}
+  {/if}
+  {#if type === "image"}<img
+      class="mr-2"
+      src={definition.image.path}
+      alt={definition.image.alt}
+      width="24"
+    />
+    {definition.text}
+  {/if}
+</div>
