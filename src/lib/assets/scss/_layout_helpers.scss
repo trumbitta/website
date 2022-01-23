@@ -2,29 +2,6 @@
 /* --- Layout Helpers --- */
 /* -------------------------------------- */
 
-main {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 87.5rem;
-
-  @media (max-width: 1032px) {
-    width: 93%;
-  }
-
-  @media (min-width: 1141px) {
-    width: 91%;
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    padding: 0 var(--micro);
-  }
-
-  @media (max-width: 375px) {
-    padding: var(--macro);
-  }
-}
-
 main > header:first-child,
 .header {
   text-align: center;
@@ -77,40 +54,4 @@ header.tight.tight {
 
 main > header + section {
   @apply mt-0 !important;
-}
-
-/* CARDS */
-.cards {
-  display: flex;
-  flex-flow: row wrap;
-  margin-bottom: var(--small);
-  justify-content: center;
-  max-width: 98vw;
-
-  & > * {
-    margin: 0 0 2rem;
-  }
-}
-.cards img {
-  margin: 0 auto 1em;
-}
-
-.cards.double > div {
-  flex: 0 1 calc(50% - 2rem);
-  min-width: 400px;
-  align-self: stretch;
-
-  @media (max-width: 768px) {
-    min-width: 350px;
-  }
-
-  @media (max-width: 400px) {
-    min-width: 300px;
-  }
-}
-
-.pricingContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }

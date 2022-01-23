@@ -5,7 +5,7 @@
   export let pricingPlans: Pricing[];
 </script>
 
-<div class="pricingContainer">
+<div class="flex flex-wrap justify-center">
   {#each pricingPlans as pricing}
     <PricingBox {pricing} />
   {/each}
