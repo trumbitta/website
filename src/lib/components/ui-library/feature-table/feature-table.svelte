@@ -6,10 +6,9 @@
   export let tableData: FeatureTable;
 
   const gridColumns = `grid-cols-${tableData.columns.length + 1}`;
-  console.log(gridColumns);
 </script>
 
-<div class="grid-cols-5 gap-4 mb-8 hidden md:grid">
+<div class="gap-4 mb-8 hidden md:grid {gridColumns}">
   <FeatureTableToc tocData={tableData.toc} />
   {#each tableData.columns as col}
     <FeatureTableColumn featureData={col} />
