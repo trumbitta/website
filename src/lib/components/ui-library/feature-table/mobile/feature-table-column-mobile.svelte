@@ -5,10 +5,12 @@
 
   export let featureData: FeatureTableColumn;
 
+  const shadow = featureData.isHighlighted ? "shadow-brand" : "shadow-normal";
+
   let isShown: boolean = false;
 </script>
 
-<div class="p-x-small bg-off-white shadow-xl rounded-3xl max-w-[400px] mx-auto">
+<div class="p-x-small bg-off-white {shadow} rounded-3xl max-w-[400px] mx-auto">
   <FeatureTableHeaderMobile headerData={featureData.header} bind:isShown />
   {#if isShown}
     <section

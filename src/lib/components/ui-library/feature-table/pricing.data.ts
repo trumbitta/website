@@ -136,6 +136,7 @@ export const personalPlanTableData: FeatureTableColumn = {
 };
 
 export const professionalPlanTableData: FeatureTableColumn = {
+  isHighlighted: true,
   header: {
     headline: "Professional",
     subtitle: `${isEurope() ? "€23" : "$25"} per user/month`,

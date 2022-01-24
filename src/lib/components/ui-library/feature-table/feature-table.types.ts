@@ -25,6 +25,7 @@ export type FeatureImage = {
 };
 
 export type FeatureTableColumn = {
+  isHighlighted?: boolean;
   header: FeatureTableHeader;
   items: FeatureItemDetail[];
 };

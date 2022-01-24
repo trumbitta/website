@@ -4,9 +4,11 @@
   import type { FeatureTableColumn } from "../feature-table.types";
 
   export let featureData: FeatureTableColumn;
+
+  const shadow = featureData.isHighlighted ? "shadow-brand" : "shadow-normal";
 </script>
 
-<div class="p-4 bg-[#f9f9f9] shadow-xl rounded-3xl">
+<div class="p-4 bg-[#f9f9f9] {shadow} rounded-3xl">
   <FeatureTableHeader headerData={featureData.header} />
   <section
     class="grid grid-cols-1 auto-rows-[3.75rem] border-t-2 border-divider pt-4 "
