@@ -1,34 +1,21 @@
 <script lang="ts">
-  let isShown: boolean = false;
+  import FeatureTableHeaderMobile from "./feature-table-header-mobile.svelte";
 
-  const toggleIsShown = () => {
-    isShown = !isShown;
-  };
+  let isShown: boolean = false;
 </script>
 
-<div class="p-4 bg-off-white shadow-xl rounded-3xl max-w-[400px] mx-auto">
-  <div class="p-4 mb-x-small flex flex-col justify-center items-center">
-    <div class="text-center mb-x-small">
-      <h3>Free Plan</h3>
-      <p>Thats a super-neat subtitle</p>
-    </div>
-    <button
-      class="pt-x-small border-t-2 border-divider w-56"
-      on:click={() => toggleIsShown()}
+<div class="p-x-small bg-off-white shadow-xl rounded-3xl max-w-[400px] mx-auto">
+  <FeatureTableHeaderMobile bind:isShown />
+  {#if isShown}
+    <section
+      class="grid grid-cols-1 auto-rows-[3.75rem] border-t-2 border-divider pt-4"
     >
-      <div class="underline">
-        {#if isShown}
-          Hide Features
-        {:else}
-          View all Features
-        {/if}
+      <div class="flex flex-col justify-center items-center">
+        <div class="font-bold mb-macro">
+          {@html "Hallo Welt"}
+        </div>
+        <img alt="Yes" class="mx-auto" height="24" width="24" src="/tick.svg" />
       </div>
-      <img
-        src="/arrow.svg"
-        alt="Arrow Toggle"
-        class="h-6 w-6 mt-macro mx-auto duration-200"
-        class:rotate-180={isShown}
-      />
-    </button>
-  </div>
+    </section>
+  {/if}
 </div>
