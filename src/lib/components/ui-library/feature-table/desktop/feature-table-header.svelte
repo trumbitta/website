@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { FeatureTableHeader } from "./feature-table.types";
+  import type { FeatureTableHeader } from "../feature-table.types";
 
   export let isToc: boolean = false;
   export let headerData: FeatureTableHeader = { headline: "" };

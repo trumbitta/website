@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { FeatureItemDetail } from "./feature-table.types";
+  import type { FeatureItemDetail } from "../feature-table.types";
   export let definition: FeatureItemDetail;
 </script>
 

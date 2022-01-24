@@ -1,7 +1,7 @@
 <script lang="ts">
   import FeatureTableHeader from "./feature-table-header.svelte";
   import FeatureTableItem from "./feature-table-item.svelte";
-  import type { FeatureTableColumn } from "./feature-table.types";
+  import type { FeatureTableColumn } from "../feature-table.types";
 
   export let featureData: FeatureTableColumn;
 </script>
