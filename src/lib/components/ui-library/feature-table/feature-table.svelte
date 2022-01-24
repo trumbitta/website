@@ -6,16 +6,19 @@
   export let tableData: FeatureTable;
 
   const gridColumns = `grid-cols-${tableData.columns.length + 1}`;
+  console.log(gridColumns);
 </script>
 
-<div class="{gridColumns} gap-4 mb-8 hidden md:grid">
+<div class="grid-cols-5 gap-4 mb-8 hidden md:grid">
   <FeatureTableToc tocData={tableData.toc} />
   {#each tableData.columns as col}
     <FeatureTableColumn featureData={col} />
   {/each}
 </div>
 <div class="grid grid-cols-1 md:hidden gap-4 justify-center">
-  <div class="w-full">
-    <FeatureTableColumnMobile />
+  <div class="w-full space-y-8">
+    {#each tableData.columns as col}
+      <FeatureTableColumnMobile featureData={col} />
+    {/each}
   </div>
 </div>

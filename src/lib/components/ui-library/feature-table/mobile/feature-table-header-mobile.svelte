@@ -1,4 +1,7 @@
 <script lang="ts">
+  import type { FeatureTableHeader } from "../feature-table.types";
+
+  export let headerData: FeatureTableHeader;
   const toggleIsShown = () => {
     isShown = !isShown;
   };
@@ -6,9 +9,20 @@
 </script>
 
 <div class="mb-x-small flex flex-col justify-center items-center">
-  <div class="text-center mb-x-small">
-    <h3>Free Plan</h3>
-    <p>Thats a super-neat subtitle</p>
+  <div class="mb-x-small flex flex-col justify-center items-center">
+    {#if headerData.image}
+      <img
+        src={headerData.image.path}
+        alt={headerData.image.alt}
+        class="h-10 mb-macro"
+      />
+    {/if}
+    <div class="text-center ">
+      <h3>{headerData.headline}</h3>
+      {#if headerData.subtitle}
+        <p>{headerData.subtitle}</p>
+      {/if}
+    </div>
   </div>
   <button
     class="pt-x-small border-t-2 border-divider w-56"
