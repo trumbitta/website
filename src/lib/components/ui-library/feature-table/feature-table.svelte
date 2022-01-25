@@ -5,10 +5,15 @@
   import FeatureTableColumnMobile from "./mobile/feature-table-column-mobile.svelte";
   export let tableData: FeatureTable;
 
-  const gridColumns = `grid-cols-${tableData.columns.length + 1}`;
+  const colMap = {
+    2: "md:grid-cols-2",
+    3: "md:grid-cols-3",
+    4: "md:grid-cols-4",
+    5: "md:grid-cols-5",
+  };
 </script>
 
-<div class="gap-4 mb-8 hidden md:grid {gridColumns}">
+<div class="gap-4 mb-8 hidden md:grid {colMap[tableData.columns.length + 1]}">
   <FeatureTableToc tocData={tableData.toc} />
   {#each tableData.columns as col}
     <FeatureTableColumn featureData={col} />
