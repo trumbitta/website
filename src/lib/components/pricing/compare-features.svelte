@@ -45,10 +45,6 @@
     ul {
       @apply px-xx-small mt-macro;
     }
-
-    .card {
-      @apply pb-micro;
-    }
   }
 
   .toc li {
