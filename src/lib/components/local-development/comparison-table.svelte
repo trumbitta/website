@@ -2,7 +2,7 @@
   import {
     bobTableData,
     aliceTableData,
-  } from "$lib/contents/gitpod-vs-local-development";
+  } from "$lib/contents/local-development";
 
   import Section from "../section.svelte";
   import ComparisonTableSectionMobile from "../tables/comparison-table-section-mobile.svelte";
@@ -65,7 +65,7 @@
     <h3>How does the setup affect their work?</h3>
   </div>
   <div class="featureTable">
-    <section class="card toc">
+    <section class="toc">
       <ul class="tableOfContents" role="presentation">
         <li>Setup new Project</li>
         <li>Develop a new feature</li>

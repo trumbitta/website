@@ -15,7 +15,7 @@ Gitpod comes with great built-in support for JavaScript, TypeScript, and tools l
 
 Here are a few JavaScript example projects that are automated with Gitpod:
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Repository                                                   | Description                                                                             | Try it                                                                                                                            |
 | ------------------------------------------------------------ | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -44,15 +44,14 @@ f
 
 ## Node Versions
 
-Gitpod comes with the latest stable Node.js version pre-installed but let's say your project uses a different version of `node` (say 14.08 for example), well the good news is that Gitpod also comes with `nvm` (a tool used to manage multiple active Node.js versions) installed. To install and configure the desired version of node create a [.gitpod.Dockerfile](/docs/config-docker) and add the following to it:
+Gitpod comes with the latest stable Node.js version pre-installed but let's say your project uses a different version of `node` (say `14.8.0` for example), well the good news is that Gitpod also comes with `nvm` (a tool used to manage multiple active Node.js versions) installed. To install and configure the desired version of node create a [.gitpod.Dockerfile](/docs/config-docker) and add the following to it:
 
 ```dockerfile
 FROM gitpod/workspace-full:latest
 
-RUN bash -c ". .nvm/nvm.sh \
-    && nvm install 14.08 \
-    && nvm use 14.08 \
-    && nvm alias default 14.08"
+RUN bash -c 'VERSION="14.8.0" \
+    && source $HOME/.nvm/nvm.sh && nvm install $VERSION \
+    && nvm use $VERSION && nvm alias default $VERSION'
 
 RUN echo "nvm use default &>/dev/null" >> ~/.bashrc.d/51-nvm-fix
 ```

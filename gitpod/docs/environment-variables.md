@@ -29,6 +29,13 @@ Environment variables beginning with the prefix `GITPOD_` are reserved for inter
 Gitpod supports encrypted, user-specific environment variables.
 They are stored as part of your user settings and can be used to set access tokens, or pass any other kind of user-specific information to your workspaces.
 
+## Project-Specific Environment Variables
+
+Environment variables which are defined in [project](/docs/teams-and-projects#projects) settings will be visible in prebuilds, and optionally also in workspaces. This is useful for prebuilds to access restricted services.
+
+**WARNING**  
+Care should be taken with secrets. Allowing secrets to be accessed from workspaces will expose those secrets to anyone who can open the workspace.
+
 ### Using the command line: `gp env`
 
 The `gp` CLI prints and modifies the persistent environment variables associated with your user for the current repository.

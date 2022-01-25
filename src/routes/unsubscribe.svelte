@@ -31,7 +31,9 @@
   }}
 />
 
-<section class="card shadow-xl mb-medium text-center sm:mx-8">
+<section
+  class="p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-off-white shadow-xl mb-medium text-center sm:mx-8"
+>
   <h1 class="h4">Unsubscribed</h1>
   <p class="max-w-2xl text-large mx-auto">
     You have been sucessfully unsubscribed. If you would like to revert it,

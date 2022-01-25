@@ -58,7 +58,7 @@ In order to make live reload work we need to add a bit of configuration as speci
 
 ## Example Projects
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Repository                                                          | Description                        | Try it                                                                                                                              |
 | ------------------------------------------------------------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |

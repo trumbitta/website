@@ -15,7 +15,7 @@ Gitpod comes with great support for Python built-in. Still, depending on your pr
 
 Before we get started, here are some examples of already-[gitpodified](/blog/gitpodify) repositories!
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Repository                                                                                | Description                                               | Try it                                                                                                                                         |
 | ----------------------------------------------------------------------------------------- | --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -132,7 +132,7 @@ We also support other GUI frameworks such as `Kivy` and `PyQt`
 <br>
 Here are some other examples of Python GUI applications in Gitpod:
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Name                                                              | Framework | Try it                                                                                                                              |
 | ----------------------------------------------------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------- |

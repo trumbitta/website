@@ -1,6 +1,21 @@
 import type { TableData } from "$lib/types/table-data.type";
 import type { Feature } from "$lib/types/feature.type";
 
+export const openSourceFeature = {
+  title: "Open-source",
+  paragraph:
+    "Gitpod puts developers' interest first and seemlessly integrates with your existing tools & workflows.",
+  featureList: [
+    "Host Gitpod yourself on GCP, AWS, Azure or self-managed Kubernetes",
+    "Contribute to Gitpod and build your own customizations",
+    "Works just as smoothly with GitHub, GitLab and Bitbucket",
+  ],
+  image: {
+    src: "/images/github-codespaces/spaces-3.svg",
+    alt: "Gitpod integrations",
+  },
+};
+
 export const features: Feature[] = [
   {
     title: "Your environment, your tools, your&nbsp;craft",
@@ -11,20 +26,7 @@ export const features: Feature[] = [
       alt: "Multiple IDEs supported by Gitpod",
     },
   },
-  {
-    title: "Open-source",
-    paragraph:
-      "Gitpod puts developers' interest first and seemlessly integrates with your existing tools & workflows.",
-    featureList: [
-      "Host Gitpod yourself on GCP, AWS, Azure or self-managed Kubernetes",
-      "Contribute to Gitpod and build your own customizations",
-      "Works just as smoothly with GitHub, GitLab and Bitbucket",
-    ],
-    image: {
-      src: "/images/codespace/spaces-3.svg",
-      alt: "Gitpod integrations",
-    },
-  },
+  openSourceFeature,
   {
     title: "Ephemeral workspaces",
     paragraph:

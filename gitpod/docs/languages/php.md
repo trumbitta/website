@@ -13,7 +13,7 @@ Gitpod supports PHP right out of the box, but more advanced features such as deb
 
 ## Example Repositories
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Repository                                                         | Description                                                                    | Try it                                                                                                                                        |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -27,7 +27,7 @@ Gitpod supports PHP right out of the box, but more advanced features such as deb
 
 ## Debugging PHP in Gitpod
 
-![PHP debugging example](../../../static/images/docs/phpDebug.gif)
+![PHP debugging example](../../../static/images/docs/phpDebug.png)
 
 The PHP Debug extension allows debugging PHP applications from within Gitpod.
 
@@ -38,18 +38,7 @@ First, you must create a [.gitpod.Dockerfile](/docs/config-docker) for your repo
 ```dockerfile
 FROM gitpod/workspace-full
 
-RUN sudo apt-get update -q \
-    && sudo apt-get install -y php-dev
-
-RUN wget http://xdebug.org/files/xdebug-2.9.1.tgz \
-    && tar -xvzf xdebug-2.9.1.tgz \
-    && cd xdebug-2.9.1 \
-    && phpize \
-    && ./configure \
-    && make \
-    && sudo mkdir -p /usr/lib/php/20190902 \
-    && sudo cp modules/xdebug.so /usr/lib/php/20190902 \
-    && sudo bash -c "echo -e '\nzend_extension = /usr/lib/php/20190902/xdebug.so\n[XDebug]\nxdebug.remote_enable = 1\nxdebug.remote_autostart = 1\n' >> /etc/php/7.4/cli/php.ini"
+RUN sudo apt-get update && sudo apt-get install php-xdebug -y
 ```
 
 Second, reference the above Dockerfile in a [.gitpod.yml](/docs/config-gitpod-file) file, and then also install the extension, like so:
@@ -57,39 +46,17 @@ Second, reference the above Dockerfile in a [.gitpod.yml](/docs/config-gitpod-fi
 ```yaml
 image:
   file: .gitpod.Dockerfile
-# This is to get rid of the annoying popup feel free to leave this out
-ports:
-  - port: 9000
-    onOpen: ignore
+
 vscode:
   extensions:
-    - felixfbecker.php-debug@1.13.0:WX8Y3EpQk3zgahy41yJtNQ==
+    - felixfbecker.php-debug
 ```
 
-Next create a new directory called `.theia` and in that directory add a file called `launch.json` and add the following content.
+Head over to `Run and Debug` on the left hand side and have fun debugging PHP! You can also create a `launch.json` file.
 
-```json
-{
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "php",
-      "name": "Launch",
-      "request": "launch",
-      "stopOnEntry": true,
-      "program": "${file}",
-      "cwd": "${workspaceRoot}",
-      "externalConsole": false
-    }
-  ]
-}
-```
+Finally, here is a full [example repository](https://github.com/gitpod-io/Gitpod-PHP-Debug) containing the complete Gitpod PHP debug configuration described above. You can try it by clicking here:
 
-Then have fun debugging PHP
-
-Finally, here is a full [example repository](https://github.com/JesterOrNot/Gitpod-PHP-Debug) containing the complete Gitpod PHP debug configuration described above. You can try it by clicking here:
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/JesterOrNot/Gitpod-PHP-Debug)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/gitpod-io/Gitpod-PHP-Debug)
 
 ## PECL Package Manager
 

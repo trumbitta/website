@@ -22,7 +22,7 @@ JetBrains GoLand is currently in Beta. We have a [JetBrains channel on our Disco
 2. Select "Open In Desktop IDE" and choose <kbd>GoLand</kbd>.
 3. Start a _new workspace_ and you will be prompted to use JetBrains when the workspace starts
 
-<img class="screenshot" alt="Selecting GoLand in the preferences" src="/images/editors/goland.gif">
+<img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Selecting GoLand in the preferences" src="/images/editors/goland.gif">
 
 ### FAQs
 

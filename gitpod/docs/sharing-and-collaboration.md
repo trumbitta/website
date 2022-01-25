@@ -53,7 +53,7 @@ This marks your workspace as shared. When you open it, you can copy & share its 
 > Beware, anybody with this URL and a Gitpod account will be able to access the workspace as long as
 > it is shared and running.
 >
-> Every action involving Git in a shared workspace happens on behalf of the workspace owner's account without further authorization.
+> Every action involving Git in a shared workspace happens on behalf of the workspace owner's account without further authorization. This includes access to secrets used in a shared workspace.
 > It is highly recommended to give workspace URLs only to trusted users and unshare workspaces as soon as sharing them is no longer necessary.
 >
 > **A running Gitpod workspace really is your personal machine.**

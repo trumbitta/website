@@ -23,7 +23,7 @@
     {
       href: "/screencasts",
       label: "Screencasts",
-      isHighlighted: true,
+      highlight: true,
     },
     {
       href: "/blog",

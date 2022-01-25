@@ -23,7 +23,7 @@ As of today Gitpod is open source under the AGPL license at [github.com/gitpod-i
 
 For those of you who know us, this probably does not come as a big surprise. Working in open source is in our DNA and everything we’ve created over the past 10 years, including [Theia](https://github.com/eclipse-theia/theia), [Xtext](https://github.com/eclipse/xtext), [Open VSX](https://github.com/eclipse/openvsx) and many other projects have been open source. In fact, Gitpod was our only closed-source project and it is a relief to change that going forward.
 
-<h2 class="h1">Open-Source Contributions</h2>
+## Open-Source Contributions
 
 Contributing to Gitpod should be easy and accessible for everyone. All contributions are welcome, including pull requests, issues, documentation as well as updates and tweaks, blog posts, tutoials, and more. Please head over to [Github](https://github.com/gitpod-io/gitpod) to find out about the various ways you can contribute and join our [Gitpod Community](https://community.gitpod.io/).
 
@@ -41,7 +41,7 @@ Sven will run a webinar next week on Thursday, where we will showcase how we use
     How Gitpod uses Gitpod
 </a>
 
-<h2 class="h1">Gitpod Self-Hosted is Now Free</h2>
+## Gitpod Self-Hosted is Now Free
 
 The [SaaS offering of gitpod.io](/pricing) remains the easiest way to streamline your development workflows with continuously prebuilt dev environments.
 

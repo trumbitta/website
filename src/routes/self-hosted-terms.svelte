@@ -23,10 +23,10 @@
     Gitpod Self-Hosted Free License Terms and Gitpod Enterprise Source Code
     License
   </h1>
-  <ol class="toc" type="1">
+  <ol class="toc ol-decimal">
     <li>
       <h2>Preamble</h2>
-      <ol type="1">
+      <ol class="ol-decimal">
         <li>
           These Software Licensing Terms (“Terms”) provide the terms and
           conditions that govern usage of the Software Gitpod Self-Hosted Free

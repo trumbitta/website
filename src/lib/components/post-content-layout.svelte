@@ -70,6 +70,12 @@
   ];
 </script>
 
+<style>
+  .prose :global(nav.toc) {
+    @apply hidden;
+  }
+</style>
+
 <svelte:head>
   <link rel="stylesheet" href="/prism-solarized-light.min.css" />
 </svelte:head>
@@ -85,14 +91,14 @@
   }}
 />
 <div class="flex justify-center mt-small mb-8">
-  <div class="post content-blog">
+  <div class="w-full lg:w-[50rem] leading-[177.7%]">
     <img
       src="/images/{imagesDirectoryName}/{slug}/{teaserImage || image}"
       alt={`${title}`}
-      class="headerImage"
+      class="max-h-[540px] rounded-tl-2xl rounded-tr-[1.3rem]"
     />
-    <p class="date">{dateDisplay}</p>
-    <h1>{title}</h1>
+    <p class="mt-[1.875rem] mb-6 text-dark-grey">{dateDisplay}</p>
+    <h1 class="mb-6 text-h3">{title}</h1>
     <p>
       <span
         ><Avatars
@@ -104,14 +110,18 @@
         /></span
       >
     </p>
-    <div>
+    <div
+      class="content-blog prose prose-img:rounded-tl-2xl prose-img:rounded-tr-[1.3rem] max-w-none mt-10"
+    >
       <slot />
     </div>
-    <section class="share">
-      <h2 class="h4">Share this post:</h2>
-      <ul>
+    <section
+      class="flex my-12 items-center border-t border-solid border-divider"
+    >
+      <h2 class="mt-4 mr-4 mb-4 text-p-large">Share this post:</h2>
+      <ul class="flex items-center list-none">
         {#each socialLinks as link}
-          <li>
+          <li class="mt-4 mr-4 mb-4">
             <a
               href={link.href}
               rel="noreferrer"

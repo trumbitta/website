@@ -167,7 +167,7 @@
 
   <h2 id="detailed">More Detailed Information</h2>
 
-  <ol type="I">
+  <ol class="ol-roman">
     <li><a href="#details-I">What are Personal Data?</a></li>
     <li>
       <a href="#details-II"
@@ -208,7 +208,7 @@
       >
     </li>
   </ol>
-  <ol type="I" class="toc">
+  <ol class="toc ol-roman">
     <li>
       <h2 id="details-I">What are Personal Data?</h2>
       <p>

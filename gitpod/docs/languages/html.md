@@ -15,7 +15,7 @@ Gitpod has great HTML and CSS support. In fact, Gitpod was made with web develop
 
 Here are a few HTML/CSS example projects that are already automated with Gitpod:
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Repository                                                                 | Description                                                                   | Try it                                                                                                                                   |
 | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |

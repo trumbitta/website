@@ -33,7 +33,7 @@
 <AnnouncementBanner />
 <EditInGitpod />
 <div class="flex">
-  <div class="content-docs flex-auto min-w-0 xl:w-2/3">
+  <div class="content-docs prose max-w-none flex-auto min-w-0 xl:w-2/3">
     <slot />
   </div>
   <OnThisPageNav class="mt-20" />

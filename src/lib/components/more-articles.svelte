@@ -16,9 +16,11 @@
       {text}
     </p>
   {/if}
-  <div class="posts-grid">
+  <div
+    class="grid m-auto max-w-7xl w-full gap-6 grid-cols-none justify-center md:grid-cols-2 lg:grid-cols-3"
+  >
     {#each posts as post}
-      <div class="posts-grid__item">
+      <div class="flex justify-center min-w-[20rem] max-w-sm">
         <PostPreview {post} type="blog" isMostRecent headlineOrder="h3" />
       </div>
     {/each}

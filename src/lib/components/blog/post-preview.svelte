@@ -12,37 +12,10 @@
 
   export let headlineOrder: "h3" | "" = "";
 
-  const href = post && post.url ? post.url : `/${type}/${post.slug}`;
+  const href = post && post.href ? post.href : `/${type}/${post.slug}`;
   const target =
-    post && post.url && isAnExternalLink(post.url) ? "_blank" : undefined;
+    post && post.href && isAnExternalLink(post.href) ? "_blank" : undefined;
 </script>
-
-<style lang="postcss">
-  .blurb > :first-child {
-    @media (min-width: 1280px) {
-      flex: 0 0 75%;
-    }
-  }
-
-  h2,
-  h3 {
-    @apply text-h4;
-  }
-  h2 a,
-  h3 a {
-    @apply no-underline text-black;
-  }
-  h2 a:focus,
-  h3 a:hover,
-  h2 a:hover,
-  h3 a:focus {
-    @apply underline;
-  }
-
-  p {
-    @apply mt-micro;
-  }
-</style>
 
 <div
   class:bg-sand-dark={!isMostRecent}
@@ -69,27 +42,37 @@
     </a>
   {/if}
   <div
-    class="blurb {layout === 'column'
+    class="{layout === 'column'
       ? 'flex-col h-full flex-nowrap'
       : 'flex-wrap'} flex lg:justify-between p-x-small pt-small"
   >
     <div>
       {#if headlineOrder === "h3"}
-        <h3 class="h2">
-          <a {href} {target} sveltekit:prefetch>
+        <h3 class="text-h4">
+          <a
+            {href}
+            {target}
+            sveltekit:prefetch
+            class="no-underline text-black focus:underline hover:underline"
+          >
             {post.title}
           </a>
         </h3>
       {:else}
-        <h2>
-          <a {href} {target} sveltekit:prefetch>
+        <h2 class="text-h4">
+          <a
+            {href}
+            {target}
+            sveltekit:prefetch
+            class="no-underline text-black focus:underline hover:underline"
+          >
             {post.title}
           </a>
         </h2>
       {/if}
       <p>{post.excerpt}</p>
     </div>
-    <p>
+    <p class="mt-micro">
       <span>
         {#if post.author}
           <Avatars

@@ -154,7 +154,7 @@ To work with Vaadin in Gitpod, you will need to properly configure your reposito
 
 Here are a few Vaadin example projects that are already automated with Gitpod:
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Repository                                                               | Description                               | Try it                                                                                                                                      |
 | ------------------------------------------------------------------------ | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -50,7 +50,7 @@ Define where Gitpod checks out the project's code, relative to `/workspace`.
 
 In most cases, this is not needed. If you work on an older Go project, please see [Checkout and Workspace Location](/docs/checkout-location) for more details.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default      |
 | -------- | ------------ |
@@ -70,7 +70,7 @@ Define a workspace's git configuration as key-value pairs.
 
 Please refer to https://git-scm.com/docs/git-config#_values for a list of accepted values.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default   |
 | -------- | --------- |
@@ -90,7 +90,7 @@ gitConfig:
 
 Configure the [GitHub Gitpod](https://github.com/apps/gitpod-io) app. At this time, the following configuration is used to configure [continuous prebuilds](/docs/prebuilds) for GitHub repositories.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default   |
 | -------- | --------- |
@@ -118,7 +118,7 @@ Gitpod can modify the description of a pull request to add an “Open in Gitpod�
 
 ![An Open in Gitpod badge in a PR description](../../../images/docs/beta/references/gitpod-yml/references-gitpod-yml-github-badge.png)
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type      | Default |
 | --------- | ------- |
@@ -132,7 +132,7 @@ Configure whether Gitpod registers itself as a status check to pull requests - m
 
 To learn more about status checks, please see the GitHub documentation [about status checks](https://docs.github.com/en/github/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/about-status-checks).
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default                  | Values                                    |
 | -------- | ------------------------ | ----------------------------------------- |
@@ -146,7 +146,7 @@ Gitpod can add a comment with an “Open in Gitpod” button to your pull reques
 
 ![An Open in Gitpod badge in a PR description](../../../images/docs/beta/references/gitpod-yml/references-gitpod-yml-github-comment.png)
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type      | Default |
 | --------- | ------- |
@@ -162,7 +162,7 @@ Deprecated.
 
 Define whether Gitpod creates prebuilds for all branches.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type      | Default |
 | --------- | ------- |
@@ -174,7 +174,7 @@ Define whether Gitpod creates prebuilds for all branches.
 
 Define whether Gitpod creates prebuilds for the default branch.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type      | Default |
 | --------- | ------- |
@@ -186,7 +186,7 @@ Define whether Gitpod creates prebuilds for the default branch.
 
 Define whether Gitpod creates prebuilds for pull requests from the original repository.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type      | Default |
 | --------- | ------- |
@@ -198,7 +198,7 @@ Define whether Gitpod creates prebuilds for pull requests from the original repo
 
 Define whether Gitpod creates prebuilds for pull requests from forks.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type      | Default |
 | --------- | ------- |
@@ -214,7 +214,7 @@ Public images are hosted on [Docker Hub](https://hub.docker.com/u/gitpod/) and c
 
 To see a list of Gitpod-provided images, please see [gitpod-io/workspace-images](https://github.com/gitpod-io/workspace-images).
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type                 | Default                 |
 | -------------------- | ----------------------- |
@@ -251,7 +251,7 @@ To define a custom Docker image, you can use the following configuration:
 
 For a list of examples, please see https://github.com/gitpod-io/workspace-images.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default   |
 | -------- | --------- |
@@ -263,7 +263,7 @@ For a list of examples, please see https://github.com/gitpod-io/workspace-images
 
 Optionally, you can set the `image.context`. This is useful when you want to copy files into the Docker image. The [Docker docs](https://docs.docker.com/engine/reference/builder/#usage) describe this in more detail.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default   |
 | -------- | --------- |
@@ -275,7 +275,7 @@ Optionally, you can set the `image.context`. This is useful when you want to cop
 
 Configure how Gitpod treats various ports your application may listen on. You can learn more about this in the [Exposing Ports](/docs/config-ports) documentation.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type    | Default   |
 | ------- | --------- |
@@ -297,7 +297,7 @@ ports:
 
 Define what to do when Gitpod detects a given port is being listened on.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default   | Values                                                                  |
 | -------- | --------- | ----------------------------------------------------------------------- |
@@ -309,7 +309,7 @@ Define what to do when Gitpod detects a given port is being listened on.
 
 Define a single port or a range of ports, e.g. `3000-3100`.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type                 | Default   |
 | -------------------- | --------- |
@@ -323,7 +323,7 @@ Define whether to expose the port publicly or keep it private.
 
 A public port allows you to share a URL for a given port with team members, for example if you want to get their feedback on a new feature you develop.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default   | Values                     |
 | -------- | --------- | -------------------------- |
@@ -335,7 +335,7 @@ A public port allows you to share a URL for a given port with team members, for 
 
 Define how Gitpod prepares & builds your project and how it can start the project's development server(s). To learn more, please visit [Start Tasks](/docs/config-start-tasks). Each array element opens in its own terminal.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type    | Default   |
 | ------- | --------- |
@@ -364,7 +364,7 @@ A shell command to run before `init` and the main `command`. This command is exe
 
 Learn more about [Start Tasks](/docs/config-start-tasks) in the docs.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default   |
 | -------- | --------- |
@@ -378,7 +378,7 @@ The main shell command to run after `before` and `init`. This command is execute
 
 Learn more about [Start Tasks](/docs/config-start-tasks) in the docs.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default   |
 | -------- | --------- |
@@ -392,7 +392,7 @@ Define environment variables that will be available in the workspace.
 
 Learn more about [Environment Variables](/docs/environment-variables) in the docs.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default   |
 | -------- | --------- |
@@ -410,7 +410,7 @@ This task is expected to terminate. If it fails, the `command` property will not
 
 Learn more about [Start Tasks](/docs/config-start-tasks) in the docs.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default   |
 | -------- | --------- |
@@ -422,7 +422,7 @@ Learn more about [Start Tasks](/docs/config-start-tasks) in the docs.
 
 A name for the task, also shown on the terminal tab.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default   |
 | -------- | --------- |
@@ -438,7 +438,7 @@ Deprecated. This does not have an impact in VS Code.
 
 Configure how the terminal should be opened relative to the previous task.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default   | Values                                                                      |
 | -------- | --------- | --------------------------------------------------------------------------- |
@@ -456,7 +456,7 @@ Deprecated. Please use the [`init`](#tasksninit) task instead.
 
 Configure the VS Code editor.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default   |
 | -------- | --------- |
@@ -470,7 +470,7 @@ Define a list of extensions which should be installed for users of this workspac
 
 Please note, Gitpod uses the [Open VSX registry](https://open-vsx.org/) to find extensions. If you cannot find an extension you know exists in your local VS Code, please get in touch with us or open a new PR in the [open-vsx/publish-extensions](https://github.com/open-vsx/publish-extensions) repository to add the extension to Open VSX 🙏.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default   |
 | -------- | --------- |
@@ -496,7 +496,7 @@ Define which path Gitpod considers the project's workspace directory, relative t
 
 In most cases, this is not needed. If you work on an older Go project, please see [Checkout and Workspace Location](/docs/checkout-location) for more details.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Type     | Default      |
 | -------- | ------------ |

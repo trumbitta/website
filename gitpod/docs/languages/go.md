@@ -15,7 +15,7 @@ Gitpod supports Go right out of the box, but there are still ways to optimize yo
 
 Here are a few Go example projects that are already automated with Gitpod:
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Repository                                             | Description                                               |                                                                                                                        Try It |
 | ------------------------------------------------------ | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------: |
@@ -31,7 +31,7 @@ Here are a few Go example projects that are already automated with Gitpod:
 
 ### VSCode Extensions
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Name                                                                                               | Description                                                                                |
 | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |

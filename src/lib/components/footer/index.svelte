@@ -42,7 +42,7 @@
           >
         </li> -->
         <li>
-          <FooterLink href="/gitpod-vs-github-codespaces"
+          <FooterLink href="/vs/github-codespaces"
             >Gitpod vs GitHub <br />Codespaces
           </FooterLink>
         </li>
@@ -86,7 +86,7 @@
           <FooterLink
             href="https://www.gitpod.io/careers"
             target="_blank"
-            class="highlighted">Careers</FooterLink
+            highlight>Careers</FooterLink
           >
         </li>
         <li><FooterLink href="/contact">Contact</FooterLink></li>

@@ -37,7 +37,6 @@ const config = {
       entries: ["*"],
     },
     router: true,
-    ssr: true,
     target: "#svelte",
     vite: {
       resolve: {

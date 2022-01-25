@@ -13,7 +13,7 @@ title: Dart in Gitpod
 
 Here are a few Dart example projects that are already automated with Gitpod:
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Repository                                                                  | Description                                     | Try it                                                                                                                                  |
 | --------------------------------------------------------------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |

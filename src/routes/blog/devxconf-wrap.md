@@ -75,7 +75,7 @@ Attendees of the DevX Conference were able to vote once for each of the projects
 
 In total there were 17 projects that were available for voting:
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Name                                                                                                                                                                                                                                                                                  | URL                                                 | Split of funding from $10k USD |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ------------------------------ |

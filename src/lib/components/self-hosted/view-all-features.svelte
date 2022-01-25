@@ -60,7 +60,7 @@
   textClassNames="mb-xx-small"
 >
   <div class="featureTable" slot="content">
-    <section class="card toc has-the-link">
+    <section class="toc">
       <ul class="tableOfContents text-left" role="presentation">
         <li>Public & Private Repos</li>
         <li>

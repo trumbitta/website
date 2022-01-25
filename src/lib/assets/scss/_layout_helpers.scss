@@ -80,11 +80,6 @@ main > header + section {
 }
 
 /* CARDS */
-.halfimages {
-  /* cards have the margin */
-  margin-bottom: 0;
-}
-.halfimages article,
 .cards {
   display: flex;
   flex-flow: row wrap;
@@ -99,30 +94,7 @@ main > header + section {
 .cards img {
   margin: 0 auto 1em;
 }
-@media (min-width: 50rem) {
-  .halfimages article:nth-of-type(odd) > :first-of-type {
-    order: 2;
-  }
-  .halfimages img {
-    max-width: 100%;
-  }
-}
-.halfimages article > div {
-  flex: 0 1 calc(50% - 2rem);
-  min-width: 400px;
-  align-self: center;
 
-  @media (max-width: 768px) {
-    min-width: 350px;
-  }
-
-  @media (max-width: 500px) {
-    @apply min-w-full;
-  }
-}
-.halfimages article p {
-  margin-bottom: 2rem;
-}
 .cards.double > div {
   flex: 0 1 calc(50% - 2rem);
   min-width: 400px;
@@ -135,22 +107,6 @@ main > header + section {
   @media (max-width: 400px) {
     min-width: 300px;
   }
-}
-.cards.triple > div {
-  flex: 0 1 calc(33% - 2rem);
-  min-width: 300px;
-  align-self: stretch;
-  text-align: center;
-
-  @media (max-width: 768px) {
-    flex: 0 1 calc(100% - 2rem);
-    min-width: 280px;
-  }
-}
-.triple .card {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 33% 3rem 1fr 1.5rem;
 }
 
 .pricingContainer {

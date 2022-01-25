@@ -2,7 +2,7 @@
   import { page } from "$app/stores";
 
   export let navItem: any;
-  const { href, isHighlighted, label, isExternal } = navItem;
+  const { href, highlight, label, isExternal } = navItem;
   const isPrefecthable = isExternal ? undefined : true;
 
   $: isActivePage =
@@ -21,11 +21,19 @@
   .active {
     color: var(--black);
   }
+
+  .highlight {
+    @apply relative;
+    &::after {
+      content: url("/indicator.svg");
+      @apply absolute -top-3 -right-2;
+    }
+  }
 </style>
 
 <a
   class:active={isActivePage && !isExternal}
-  class:highlighted={isHighlighted}
+  class:highlight
   {href}
   on:click
   on:focus

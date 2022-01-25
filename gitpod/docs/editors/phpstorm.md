@@ -22,7 +22,7 @@ JetBrains PhpStorm is currently in Beta. We have a [JetBrains channel on our Dis
 2. Select "Open In Desktop IDE" and choose <kbd>PhpStorm</kbd>
 3. Start a _new workspace_ and you will be prompted to use JetBrains when the workspace starts
 
-<img class="screenshot" alt="Selecting PhpStorm in the preferences" src="/images/editors/phpstorm.gif">
+<img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Selecting PhpStorm in the preferences" src="/images/editors/phpstorm.gif">
 
 ### FAQs
 

@@ -7,6 +7,8 @@ title: Editors
   export const prerender = true;
 </script>
 
+# Editors
+
 Gitpod isn't only a browser-based IDE, or only 'VS Code in the browser'.
 
 In line with [our ambition to "remove all friction from the developer experience"](https://www.notion.so/gitpod/Values-Attributes-2ed4c2f93c84499b98e3b5389980992e), Gitpod will continue to support many different IDE's and workflows. Gitpod currently has first-class support for IDE's on desktop, with more desktop IDE's coming as remote desktop support grows.

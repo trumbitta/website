@@ -15,7 +15,7 @@ Bash is the default shell for Gitpod. However, if you're developing a Bash scrip
 
 Here are a few Bash example projects that are already automated with Gitpod:
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Repository                                        | Description                      | Try It                                                                                                                |
 | ------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------- |

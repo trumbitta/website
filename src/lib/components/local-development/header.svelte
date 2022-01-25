@@ -1,5 +1,5 @@
 <script>
-  import { benefits } from "$lib/contents/gitpod-vs-local-development";
+  import { benefits } from "$lib/contents/local-development";
   import CardSmall from "../card/card-small.svelte";
 </script>
 

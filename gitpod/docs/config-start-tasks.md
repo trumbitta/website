@@ -85,7 +85,7 @@ tasks:
 
 You can configure how the terminal should be opened relative to the previous task.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | openMode                 | Description                                                |
 | ------------------------ | ---------------------------------------------------------- |
@@ -115,14 +115,11 @@ tasks:
     command: npm run dev
 ```
 
-### Multi-line tasks in two terminals
+### Multi-line tasks
 
 To run multiple commands for a given task, you can use the `|` notation where each line below (make sure you indent correctly) runs in sequence once the previous command terminates.
 
-In this example, Gitpod opens two terminals (as noted by the two `-`):
-
-1. In the first terminal, the `init` task installs dependencies and configures a database. Then, the `command` task starts the database.
-1. The second terminal only has a `command` task which starts the dev server. The application code connects to the database that is started in the first terminal (e.g. via localhost:3306).
+In the following example, the `init` task installs dependencies and configures a database. Then, the `command` task starts the dev server(s).
 
 > **Note**: In case of multiple terminals, there is no guarantee on the order in which tasks execute. The only guarantee you have is that `before`, `init` and `command` execute in that sequence **per terminal**.
 
@@ -132,8 +129,6 @@ tasks:
     init: |
       npm install
       npm run configure-database
-    command: npm run start-database
-  - name: Dev Server
     command: npm run dev
 ```
 
@@ -148,7 +143,7 @@ tasks:
       bundle install &&
       yarn install --check-files &&
       rails db:setup &&
-      gp sync-done bundle # 'bundle' is an arbitrary name I picked
+      gp sync-done bundle # 'bundle' is an arbitrary name
     command: rails server
 
   - name: Webpack

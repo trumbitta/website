@@ -41,6 +41,8 @@ vscode:
 
 You can share the installed extensions with your team by committing the `.gitpod.yml` change and pushing it to your Git repository.
 
+Extensions are installed in the `/workspace/.vscode-remote/extensions/` directory.
+
 ## User Extensions
 
 You have two options to install extensions for yourself only:

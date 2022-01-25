@@ -180,7 +180,10 @@
   </p>
 </header>
 
-<Section class="card shadow-xl mb-32 sm:mx-8" id="form">
+<Section
+  class="p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-off-white shadow-xl mb-32 sm:mx-8"
+  id="form"
+>
   <div bind:this={sectionStart} data-analytics={`{"dnt":true}`}>
     {#if isEmailSent}
       <SubmissionSuccess

@@ -59,7 +59,7 @@
   </div>
 
   <div class="featureTable">
-    <section class="card toc">
+    <section class="toc">
       <ul class="tableOfContents" role="presentation">
         <li>Pricing (SAAS)</li>
         <li>License</li>

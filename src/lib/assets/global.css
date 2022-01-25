@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-repeat: no-repeat;
+  }
+
+  :root {
+    font-size: 16px;
+  }
+
+  html {
+    @apply box-border overflow-x-hidden;
+  }
+
+  body {
+    font-family: var(--font);
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    @apply m-0 min-h-screen text-dark-grey bg-sand-light text-p-medium;
+  }
+
+  /* Make images easier to work with */
+  img,
+  picture {
+    @apply max-w-full block object-contain;
+  }
+
+  a {
+    @apply underline text-link-grey underline-offset-[0.25em];
+  }
+  a:hover,
+  a:focus {
+    @apply text-black underline decoration-transparent;
+  }
+
+  a[class] {
+    @apply no-underline;
+  }
+
+  ul:where([class]),
+  ol:where([class]) {
+    @apply m-0 p-0 list-none;
+    list-style: none;
+  }
+
+  a,
+  summary,
+  button {
+    @apply cursor-pointer;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .ol-roman {
+    @apply list-outside list-roman;
+  }
+  .ol-decimal {
+    @apply list-outside list-decimal;
+  }
+  .ol-alpha {
+    @apply list-outside list-alpha;
+  }
+}

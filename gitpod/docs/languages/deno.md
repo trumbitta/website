@@ -37,7 +37,7 @@ It'll run the latest Deno version and install the Bash completions.
 
 Here are a few Deno example projects that are already automated with Gitpod:
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Repository                                                         | Description                                     | Try it                                                                                                                            |
 | ------------------------------------------------------------------ | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |

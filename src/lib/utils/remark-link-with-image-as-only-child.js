@@ -6,7 +6,7 @@ const visitor = (node) => {
   if (node.type === "link") {
     if (node.children && node.children.length && node.children.length === 1) {
       if (node.children[0].type === "image") {
-        node.data.hProperties.class = "link-with-image-as-only-child";
+        node.data.hProperties.class = "after:hidden";
       }
     }
   }

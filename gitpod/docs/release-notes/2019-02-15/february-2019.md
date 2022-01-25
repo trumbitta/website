@@ -50,7 +50,7 @@ In addition we have introduced multiple lifecycle phases for the tasks, such as 
 
 Check the table below for an overview of the different starting scenarios.
 
-<div class="table-container">
+<div class="overflow-x-auto">
 
 | Start Mode        | Execution                   |
 | ----------------- | --------------------------- |

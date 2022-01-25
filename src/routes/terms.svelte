@@ -50,7 +50,7 @@
     of the contract, unless we explicitly and in writing agree that these
     provisions shall be valid.
   </p>
-  <ol type="A" class="toc">
+  <ol class="toc ol-alpha">
     <li>
       <h2>Creating an Account and Conclusion of the Agreement</h2>
       <p>
@@ -181,7 +181,7 @@
     <li>
       <h2>Liability</h2>
       <p>We are liable without limitation for</p>
-      <ol type="A">
+      <ol class="ol-alpha">
         <li>
           damages caused deliberately or due to gross negligence by Gitpod;
         </li>
@@ -248,7 +248,7 @@
     </li>
     <li>
       <h2>Customer's General Obligations</h2>
-      <ol type="1">
+      <ol class="ol-decimal">
         <li>
           <strong>True Data and Fair use:</strong> You must fill in all required
           fields in the sign-up sheet truthfully and completely. You must respect
@@ -289,7 +289,7 @@
         practices and you must, in particular, not nor allow others through your
         Gitpod account to:
       </p>
-      <ol type="1">
+      <ol class="ol-decimal">
         <li>
           breach any applicable laws, not limited to a specific jurisdiction;
         </li>
@@ -389,7 +389,7 @@
         In addition to our termination rights, we have the right to the
         following blocking measures:
       </p>
-      <ol type="1">
+      <ol class="ol-decimal">
         <li>
           In case a Customer is in breach of Section I. or a reasonable
           suspicion thereon considering the reasonable interests of the Customer
@@ -618,7 +618,7 @@
 
       <h2>Transfer of the Agreement to Another Party</h2>
       <p>You agree that we may transfer this Agreement to:</p>
-      <ol type="1">
+      <ol class="ol-decimal">
         <li>
           <strong>Gitpod, Inc.</strong>, a corporation incorporated and validly
           existing under the laws of the State of Delaware, United States,
@@ -669,7 +669,9 @@
     contract.
   </p>
 
-  <div class="card">
+  <div
+    class="p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-off-white"
+  >
     <div>-- begin model withdrawal form --</div>
     <p>
       To<br /> Gitpod GmbH represented by: Sven Efftinge, Moritz Eysholdt, Dr.

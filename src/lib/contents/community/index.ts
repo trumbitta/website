@@ -94,12 +94,13 @@ export const letsCollaborateActions: Card[] = [
       text: "Open a PR",
     },
   },
-  {
-    title: "Join affiliate program",
-    text: "Do you have some reach and regulary convince people about using Gitpod? Let’s discuss a collaboration.",
-    link: {
-      href: "/contact/support",
-      text: "Get in contact",
-    },
-  },
+  // Note: Commented out until its needed again
+  // {
+  //   title: "Join affiliate program",
+  //   text: "Do you have some reach and regulary convince people about using Gitpod? Let’s discuss a collaboration.",
+  //   link: {
+  //     href: "/contact/support",
+  //     text: "Get in contact",
+  //   },
+  // },
 ];

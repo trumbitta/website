@@ -1,92 +1,89 @@
 <script lang="ts">
+  import { createPopperActions } from "svelte-popperjs";
+
+  const [popperRef, popperContent] = createPopperActions();
+
+  const popperOptions = {
+    placement: "top-start",
+    modifiers: [
+      {
+        name: "offset",
+        options: {
+          offset: ({ placement }) => {
+            if (placement === "top-start") return [-8, 8];
+            return [8, 8];
+          },
+        },
+      },
+    ],
+  } as any;
+
   let clazz = "";
   export { clazz as class };
 
   export let title: string = "";
   let isRendered: boolean = false;
-
-  const mouseOver = () => {
-    isRendered = true;
-  };
-
-  const mouseLeave = () => {
-    isRendered = false;
-  };
 </script>
 
 <style lang="postcss">
   .tooltip {
-    --bg: #565252;
-    @apply absolute z-50 w-60;
-    bottom: 105%;
-    left: 90%;
-    background: var(--bg);
-
-    @media (max-width: 1700px) {
-      @apply left-1/3;
-    }
-
-    @media (max-width: 1380px) {
-      @apply left-1/2 w-56;
-    }
-
-    @media (max-width: 800px) {
-      @apply w-52;
-      left: 40%;
-    }
-
-    @media (max-width: 700px) {
-      left: 60%;
-    }
-
-    @media (max-width: 475px) {
-      @apply w-40;
-      left: 40%;
-    }
+    @apply w-auto text-off-white bg-[#565252] text-xs py-macro px-2.5 rounded-xl normal-case font-normal z-50;
 
     &::before {
       content: "";
-      @apply absolute block h-10 left-0 w-1/2 -z-10;
+      @apply absolute block h-10 left-0 w-full -z-10;
       bottom: -60%;
     }
+  }
 
-    /* 
-    &::after {
-      content: "";
-      @apply block h-4 w-4 absolute -z-10;
-      transform: rotate(45deg) translateY(-2px);
-      background: var(--bg);
-    } 
-    */
+  .tooltip :global(a) {
+    @apply text-off-white;
+  }
+  .arrow,
+  .arrow::before {
+    @apply absolute w-3 h-3 bg-inherit;
+  }
 
-    :global(a) {
-      @apply text-white;
-    }
+  .arrow {
+    @apply invisible;
+  }
+
+  .arrow::before {
+    @apply visible;
+    content: "";
+    transform: rotate(45deg);
   }
 </style>
 
-<span class="relative" on:mouseleave={mouseLeave}>
+<span
+  on:mouseleave={() => {
+    isRendered = false;
+  }}
+>
   <button
-    on:mouseover={mouseOver}
-    on:click={() => {
-      isRendered = true;
-    }}
+    on:mouseover={() => (isRendered = true)}
     on:focus={() => {
       isRendered = true;
     }}
     on:blur={() => {
       isRendered = false;
     }}
-    class="inline-flex relative {clazz}"
+    class={clazz}
   >
     <slot />
+
+    <img
+      use:popperRef
+      src="/svg/question-mark.svg"
+      alt="Tooltip"
+      class="h-5 w-5"
+    />
   </button>
 
   {#if isRendered}
-    <div
-      class="tooltip text-white text-xs py-macro px-2.5 rounded-xl normal-case font-normal"
-    >
+    <div class="tooltip" use:popperContent={popperOptions}>
       {@html title}
+      <div class="arrow -z-10" data-popper-arrow />
     </div>
   {/if}
 </span>

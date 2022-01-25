@@ -1,16 +1,14 @@
 import { sequence } from "@sveltejs/kit/hooks";
 
-export const getSession: import("@sveltejs/kit").GetSession = async (
-  request
-) => {
+export const getSession: import("@sveltejs/kit").GetSession = async (event) => {
   return {
-    changelogEntries: request.locals.changelogEntries,
-    posts: request.locals.posts,
-    guides: request.locals.guides,
+    changelogEntries: event.locals.changelogEntries,
+    posts: event.locals.posts,
+    guides: event.locals.guides,
   };
 };
 
-const handleBlogPosts = async ({ request, resolve }) => {
+const handleBlogPosts = async ({ event, resolve }) => {
   const posts = await Promise.all(
     Object.entries(import.meta.glob("/src/routes/blog/*.md")).map(
       async ([path, page]) => {
@@ -21,28 +19,28 @@ const handleBlogPosts = async ({ request, resolve }) => {
     )
   );
   posts.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
-  request.locals.posts = posts;
-  return await resolve(request);
+  event.locals.posts = posts;
+  return await resolve(event);
 };
 
-const handleChangelogEntries = async ({ request, resolve }) => {
+const handleChangelogEntries = async ({ event, resolve }) => {
   const changelogEntries = await Promise.all(
-    Object.entries(import.meta.glob("/src/lib/contents/changelog/*.md")).map(
-      async ([, mod]) => {
+    Object.entries(import.meta.glob("/src/lib/contents/changelog/*.md"))
+      .filter(([path]) => !path.endsWith("_template.md"))
+      .map(async ([, mod]) => {
         const { default: content, metadata } = await mod();
         return {
           ...metadata,
           content: content.render().html,
         };
-      }
-    )
+      })
   );
   changelogEntries.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
-  request.locals.changelogEntries = changelogEntries;
-  return await resolve(request);
+  event.locals.changelogEntries = changelogEntries;
+  return await resolve(event);
 };
 
-const handleGuides = async ({ request, resolve }) => {
+const handleGuides = async ({ event, resolve }) => {
   const guides = await Promise.all(
     Object.entries(import.meta.glob("/src/routes/guides/*.md")).map(
       async ([path, page]) => {
@@ -53,23 +51,22 @@ const handleGuides = async ({ request, resolve }) => {
     )
   );
   guides.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
-  request.locals.guides = guides;
-  return await resolve(request);
+  event.locals.guides = guides;
+  return await resolve(event);
 };
 
-const handleHeaders = async ({ request, resolve }) => {
-  const response = await resolve(request);
-
-  return {
-    ...response,
-    headers: {
-      ...response.headers,
-      "Set-Cookie":
-        "gitpod-marketing-website-visited=true; Domain=.gitpod.io; Path=/",
-      // Avoid clickjacking attacks, see https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html
-      "Content-Security-Policy": "frame-ancestors *.gitpod.io;",
-    },
-  };
+const handleHeaders = async ({ event, resolve }) => {
+  const response = await resolve(event);
+  response.headers.set(
+    "Set-Cookie",
+    "gitpod-marketing-website-visited=true; Domain=.gitpod.io; Path=/"
+  );
+  // Avoid clickjacking attacks, see https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html
+  response.headers.set(
+    "Content-Security-Policy",
+    "frame-ancestors *.gitpod.io;"
+  );
+  return response;
 };
 
 export const handle = sequence(
