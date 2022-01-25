@@ -106,7 +106,7 @@
       <img
         src="/images/{useKumquatIllustration
           ? 'kumquat.png'
-          : 'illustration-grid.jpg'}"
+          : 'illustration-grid.png'}"
         alt="Gitpod in a Nutshell"
       />
       <img

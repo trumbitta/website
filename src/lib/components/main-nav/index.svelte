@@ -21,7 +21,7 @@
 
   const navItems = [
     {
-      href: "/screencasts",
+      href: "/screencasts/getting-started-with-gitpod",
       label: "Screencasts",
       highlight: true,
     },

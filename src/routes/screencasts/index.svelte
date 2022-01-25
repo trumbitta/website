@@ -4,17 +4,39 @@
 
 <script>
   import OpenGraph from "$lib/components/open-graph.svelte";
-  import Screencast from "$lib/components/screencasts/screencast.svelte";
-  import screencasts from "$lib/contents/screencasts";
-  import Section from "$lib/components/section.svelte";
+  import { screencasts } from "$lib/contents/screencasts";
   import Explore from "$lib/components/explore.svelte";
-</script>
+  import ScreencastsGrid from "$lib/components/screencasts/screencasts-grid.svelte";
+  import Search from "$lib/components/search.svelte";
+  import SuggestedTopics from "$lib/components/screencasts/suggested-topics.svelte";
 
-<style lang="postcss">
-  .screencasts {
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 25rem));
+  let searchTerm = "";
+  let tag = "";
+
+  let filteredScreencasts = screencasts;
+
+  $: {
+    filteredScreencasts = screencasts.filter((screencast) => {
+      const isTitleAMatch = screencast.title
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+      const isDescriptionAMatch = screencast.description
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+
+      return isTitleAMatch || isDescriptionAMatch;
+    });
   }
-</style>
+
+  $: if (tag) {
+    filteredScreencasts = screencasts.filter((screencast) =>
+      screencast.tags.includes(tag)
+    );
+    searchTerm = "";
+  } else {
+    filteredScreencasts = screencasts;
+  }
+</script>
 
 <OpenGraph
   data={{
@@ -23,17 +45,23 @@
   }}
 />
 
-<Section>
-  <h1 class="h2 text-center">Get started with a screencast</h1>
-</Section>
+<header class="tight">
+  <h1 class="h2 text-center">Full screencast playlist</h1>
+  <p>Learn how to be always ready-to-code by following these short videos.</p>
+</header>
 
-<section
-  class="screencasts grid justify-center gap-y-medium gap-x-5 m-x-small px-5"
-  data-analytics={`{"context":"grid"}`}
->
-  {#each screencasts as screencast, index}
-    <Screencast {screencast} screencastNumber={index + 1} />
-  {/each}
+<Search bind:value={searchTerm} class="md:mt-medium" />
+
+<SuggestedTopics currentTopic={tag} on:setTopic={(e) => (tag = e.detail)} />
+
+<section>
+  {#if filteredScreencasts.length}
+    <ScreencastsGrid screencasts={filteredScreencasts} />
+  {:else}
+    <p class="text-center text-large">
+      Sorry, we couldn't find any results matching your search.
+    </p>
+  {/if}
 </section>
 
 <Explore />

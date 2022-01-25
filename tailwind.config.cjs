@@ -98,6 +98,7 @@ module.exports = {
       boxShadow: {
         normal: "var(--shadow)",
         light: "var(--shadow-light)",
+        light1: "var(--shadow-light-1)",
         medium: "var(--shadow-medium)",
         brand: "var(--shadow-brand)",
       },

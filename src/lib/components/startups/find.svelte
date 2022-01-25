@@ -1,5 +1,6 @@
 <script>
   import { organisationsLists } from "$lib/contents/startups";
+  import Search from "../search.svelte";
   import Section from "../section.svelte";
   import NotFound from "./not-found.svelte";
   import OrganisationsEntry from "./organisations-entry.svelte";
@@ -36,32 +37,11 @@
   h2 {
     @apply mb-small;
   }
-
-  input {
-    @apply border-none;
-  }
 </style>
 
 <Section class="relative">
   <h2 class="h3 text-center">Find your VC or accelerator</h2>
-  <div
-    class="relative bg-white rounded-xl max-w-lg mx-auto shadow-normal mb-12 pl-6 sm:pl-7"
-  >
-    <label for="search" class="sr-only">Search</label>
-    <img
-      class="absolute top-1/2 left-3 -translate-y-1/2 pointer-events-none h-xx-small w-xx-small"
-      src="/svg/mag-glass.svg"
-      alt="Search"
-      aria-hidden="true"
-    />
-    <input
-      type="text"
-      placeholder="Search"
-      bind:value={searchTerm}
-      id="search"
-      class="box-border block w-full text-p-medium h-small pl-12 pr-3 py-2 border border-transparent leading-5 text-gray-600 placeholder-gray-500 focus:outline-none focus:bg-none focus:border-white focus:ring-white focus:text-gray-900"
-    />
-  </div>
+  <Search bind:value={searchTerm} />
   <div>
     <SideNav {froms} />
     <div class="wrapper {!searchTerm ? 'space-y-32 sm:space-y-40' : ''}">

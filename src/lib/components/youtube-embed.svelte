@@ -10,6 +10,7 @@
 <script lang="ts">
   import { afterUpdate } from "svelte";
   import { trackEvent } from "./segment.svelte";
+  import Share from "./share.svelte";
 
   export let embedId: string;
   export let title: string;
@@ -54,6 +55,35 @@
       setUpVideo();
     }
   });
+
+  export const youtubeURL = `https://youtube.com/watch?v=${embedId}`;
+
+  const shareLinks = [
+    {
+      href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+        youtubeURL
+      )}`,
+      alt: "Twitter",
+      icon: "/svg/brands/twitter.svg",
+      trackingName: "twitter",
+    },
+    {
+      href: `http://www.reddit.com/submit?url=${encodeURIComponent(
+        youtubeURL
+      )}`,
+      alt: "Reddit",
+      icon: "/svg/brands/reddit.svg",
+      trackingName: "reddit",
+    },
+    {
+      href: `http://news.ycombinator.com/submitlink?u=${encodeURIComponent(
+        youtubeURL
+      )}`,
+      alt: "HackerNews",
+      icon: "/svg/brands/hackernews.svg",
+      trackingName: "hackernews",
+    },
+  ];
 </script>
 
 <style>
@@ -61,9 +91,18 @@
     position: relative;
     overflow: hidden;
     max-width: 100%;
-    max-height: 500px;
-    width: 880px;
+    max-height: 620px;
     margin: auto;
+
+    @media (min-width: 1240px) {
+      height: 620px;
+    }
+  }
+
+  .youtube,
+  .youtube + :global(div) {
+    width: 990px;
+    max-width: 100%;
   }
 
   .youtube::after {
@@ -82,7 +121,7 @@
   }
 </style>
 
-<div class="youtube">
+<div class="youtube rounded-2xl shadow-light1">
   <iframe
     id={randomId}
     src={`https://www.youtube.com/embed/${embedId}?enablejsapi=1`}
@@ -94,3 +133,8 @@
     allowfullscreen
   />
 </div>
+<Share
+  text="Share this video"
+  {shareLinks}
+  class="share justify-end mx-auto mt-xx-small"
+/>

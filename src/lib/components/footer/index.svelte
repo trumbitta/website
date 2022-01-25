@@ -66,7 +66,11 @@
       </Section>
       <Section title="Developer">
         <li><FooterLink href="/#get-started">Getting started</FooterLink></li>
-        <li><FooterLink href="/screencasts">Screencasts</FooterLink></li>
+        <li>
+          <FooterLink href="/screencasts/getting-started-with-gitpod"
+            >Screencasts</FooterLink
+          >
+        </li>
         <li><FooterLink href="/blog">Blog</FooterLink></li>
         <li><FooterLink href="/docs">Documentation</FooterLink></li>
         <li><FooterLink href="/support">Support</FooterLink></li>
