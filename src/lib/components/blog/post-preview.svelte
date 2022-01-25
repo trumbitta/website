@@ -12,9 +12,9 @@
 
   export let headlineOrder: "h3" | "" = "";
 
-  const href = post && post.url ? post.url : `/${type}/${post.slug}`;
+  const href = post && post.href ? post.href : `/${type}/${post.slug}`;
   const target =
-    post && post.url && isAnExternalLink(post.url) ? "_blank" : undefined;
+    post && post.href && isAnExternalLink(post.href) ? "_blank" : undefined;
 </script>
 
 <div

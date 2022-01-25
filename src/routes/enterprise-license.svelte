@@ -126,7 +126,9 @@
   <p>Tell us how we can help and your license will be emailed shortly.</p>
 </header>
 
-<section class="card shadow-xl mb-32 sm:mx-8">
+<section
+  class="p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-off-white shadow-xl mb-32 sm:mx-8"
+>
   <form on:submit|preventDefault={handleSubmit} novalidate>
     <h2 class="h4 title">Customer Information</h2>
 

@@ -105,10 +105,17 @@ To exit the container and return back to your Gitpod workspace, type `exit`.
 
 Once you validated the `.gitpod.Dockerfile` with the approach described in the previous chapter, it is time to start a new Gitpod workspace based on that custom image.
 
-The easiest way to try out your changes is to push them to a branch and then start another workspace on that branch, keeping the first workspace open as your main editing workspace.
+The easiest way to try out your changes is as follows:
 
-**Caution**: The above is important in case your Dockerfile has bugs and prevents Gitpod from starting a workspace.
+1. Create a new branch.
+1. Commit your changes & push the branch to your git hosting server.
+1. Open a pull / merge request and open it in your browser.
+1. Prefix the URL with `gitpod.io/#` and hit Enter.
 
-On start of the second workspace, the Docker build will start and show the output. If your Dockerfile has issues and the build fails or the resulting workspace does not look like you expected, you can force push changes to your config using your first, still running workspace and simply start a fresh workspace again to try them out.
+This starts a new workspace with your changes applied. You notice you now have two Gitpod workspaces running. The one where you made the changes and the new one, based on the pull request.
+
+**Caution**: Keeping the first workspace open is important in case your Dockerfile has bugs and prevents Gitpod from starting a workspace based on your pull request.
+
+In the second workspace, the Docker build will start and show the output. If your Dockerfile has issues and the build fails or the resulting workspace does not look like you expected, you can force push changes to your config using your first, still running workspace and simply start a fresh workspace again to try them out.
 
 We are working on allowing Docker builds directly from within workspaces, but until then this approach has been proven to be the most productive.

@@ -697,7 +697,9 @@
     contract.
   </p>
 
-  <div class="card">
+  <div
+    class="p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-off-white"
+  >
     <div>-- begin model withdrawal form --</div>
     <p class="mb-4">
       To<br /> Gitpod GmbH represented by: Sven Efftinge, Moritz Eysholdt, Dr.

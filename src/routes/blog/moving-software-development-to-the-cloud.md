@@ -17,7 +17,7 @@ As [described earlier this year](/blog/github-codespaces), Microsoft's investmen
 
 Since [we've started building Gitpod in July-2017](/blog/gitpod-online-ide), we firmly believe that fully-automated developer environments will be the standard for professional developers in 5-10 years. With a big player like Microsoft entering the market this whole space will gain additional velocity 🚀
 
-We certainly welcome the additional push Codespaces will bring, but it is important to communicate how [Gitpod compares to Codespaces](/gitpod-vs-github-codespaces).
+We certainly welcome the additional push Codespaces will bring, but it is important to communicate how [Gitpod compares to Codespaces](/vs/github-codespaces).
 
 <h2>Gitpod is Open-Source, Multi-Cloud, and Works With GitLab, GitHub, and Bitbucket</h2>
 

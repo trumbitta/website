@@ -79,7 +79,7 @@
   </li>
 </ul>
 
-<div class="max-w-4xl my-small lg:my-x-huge">
+<div class="max-w-4xl my-small lg:my-x-huge mx-auto">
   <h2>Obsessed with developer experience</h2>
   <p class="text-p-large">
     We have built developer tools, created programming languages and
@@ -99,7 +99,7 @@
   </p>
 </div>
 
-<div class="max-w-4xl my-small lg:my-x-huge">
+<div class="max-w-4xl my-small lg:my-x-huge mx-auto">
   <h2>Built on shared principles</h2>
   <p class="text-p-large">
     Values are important to us. We are developer-led and aim for a frictionless
@@ -116,7 +116,7 @@
   </p>
 </div>
 
-<div class="max-w-4xl my-small lg:my-x-huge">
+<div class="max-w-4xl my-small lg:my-x-huge mx-auto">
   <h2>Backed by great investors</h2>
   <p class="text-p-large">
     Gitpod Inc. was founded in 2020 and in early 2021 we raised $13m from
@@ -145,7 +145,7 @@
   </p>
 </div>
 
-<div class="max-w-4xl my-small lg:my-x-huge">
+<div class="max-w-4xl my-small lg:my-x-huge mx-auto">
   <h2>Find out more. We are open</h2>
   <p class="text-p-large">
     We have always built in the open. If you want to learn skim through some of
@@ -174,9 +174,9 @@
   }}
 />
 
-<div class="header max-w-4xl my-small lg:my-x-huge">
+<div class="header max-w-4xl my-small lg:my-x-huge mx-auto">
   <h2>Gitpod in the news</h2>
-  <ul class="cardlike flex flex-row flex-wrap justify-center mt-x-small">
+  <ul class="flex flex-row flex-wrap justify-center mt-x-small">
     <li
       class="p-4 flex-grow-0 flex-shrink-0 basis-1/2 min-w-[300px] text-center mb-0"
     >

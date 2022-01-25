@@ -52,7 +52,9 @@
 </div>
 
 {#if dev && error.stack}
-  <article class="card">
+  <article
+    class="p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-off-white"
+  >
     <pre>{error.stack}</pre>
   </article>
 {/if}

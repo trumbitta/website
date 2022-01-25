@@ -9,7 +9,7 @@ title: Dotfiles
 
 # Dotfiles
 
-> Dotfiles support is in BETA. If you experience issues, or have feedback, please [get in touch](/contact/support).
+> Dotfiles support is in BETA. If you experience issues, or have feedback, please [share in this issue](https://github.com/gitpod-io/gitpod/issues/7603).
 
 Dotfiles are a way to customize your developer environment according to your personal needs.
 
@@ -26,7 +26,11 @@ Gitpod will recognize and run one of the following install scripts from your dot
 - setup
 - script/setup
 
+Make sure to make your installation script executable with `chmod 755 <install-script-name>.sh` before committing and pushing to your dotfiles repository.
+
 If there is no install script, your dotfiles will be symlinked into `/home/gitpod`.
+
+The dotfiles repository installation logs are saved to `~/.dotfiles.logs`
 
 ### Example
 

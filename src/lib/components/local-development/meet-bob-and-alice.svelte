@@ -1,5 +1,5 @@
 <script>
-  import { intros } from "$lib/contents/gitpod-vs-local-development";
+  import { intros } from "$lib/contents/local-development";
 
   import Section from "../section.svelte";
   import ComparisonGraphic from "./comparison-graphic.svelte";

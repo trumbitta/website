@@ -91,7 +91,7 @@
   }}
 />
 <div class="flex justify-center mt-small mb-8">
-  <div class="lg:w-[50rem] leading-[177.7%]">
+  <div class="w-full lg:w-[50rem] leading-[177.7%]">
     <img
       src="/images/{imagesDirectoryName}/{slug}/{teaserImage || image}"
       alt={`${title}`}

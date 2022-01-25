@@ -23,6 +23,10 @@
     grid-template-rows: 350px 250px 400px 200px 100px;
   }
 
+  .card {
+    @apply p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-off-white;
+  }
+
   @media (max-width: 1059px) {
     .card {
       @apply pb-macro mb-micro md:mb-x-small;

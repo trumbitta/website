@@ -5,7 +5,7 @@ import type { Intro } from "$lib/types/intro.type";
 export const benefits: Card[] = [
   {
     icon: {
-      src: "/svg/gitpod-vs-local-development/developer-experience.svg",
+      src: "/svg/local-development/developer-experience.svg",
       alt: "Developer experience",
       transform: "scale(1.6)",
     },
@@ -14,7 +14,7 @@ export const benefits: Card[] = [
   },
   {
     icon: {
-      src: "/svg/gitpod-vs-local-development/remote-work.svg",
+      src: "/svg/local-development/remote-work.svg",
       alt: "Remote work",
       transform: "scale(1.4)",
     },
@@ -23,7 +23,7 @@ export const benefits: Card[] = [
   },
   {
     icon: {
-      src: "/svg/gitpod-vs-local-development/faster-onboarding.svg",
+      src: "/svg/local-development/faster-onboarding.svg",
       alt: "Faster onboarding",
       transform: "scale(1.5)",
     },
@@ -32,7 +32,7 @@ export const benefits: Card[] = [
   },
   {
     icon: {
-      src: "/svg/gitpod-vs-local-development/open-source-contributions.svg",
+      src: "/svg/local-development/open-source-contributions.svg",
       alt: "Open-source contributions",
       transform: "scale(1.5) translateY(4px)",
     },
@@ -43,7 +43,7 @@ export const benefits: Card[] = [
 
 export const intros: Intro[] = [
   {
-    image: "/images/gitpod-vs-local-development/bob.png",
+    image: "/images/local-development/bob.png",
     name: "Bob",
     works: "works locally",
     workflow: `
@@ -58,7 +58,7 @@ export const intros: Intro[] = [
 		`,
   },
   {
-    image: "/images/gitpod-vs-local-development/alice.png",
+    image: "/images/local-development/alice.png",
     name: "Alice",
     works: "works in the cloud",
     workflow:
@@ -69,7 +69,7 @@ export const intros: Intro[] = [
 
 export const bobTableData: TableData = {
   image: {
-    src: "/images/gitpod-vs-local-development/bob.png",
+    src: "/images/local-development/bob.png",
     class: "h-28",
   },
   title: "Bob",
@@ -126,7 +126,7 @@ export const bobTableData: TableData = {
 
 export const aliceTableData: TableData = {
   image: {
-    src: "/images/gitpod-vs-local-development/alice.png",
+    src: "/images/local-development/alice.png",
     class: "h-28",
   },
   title: "Alice",

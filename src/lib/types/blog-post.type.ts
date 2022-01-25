@@ -4,7 +4,7 @@ export type BlogPost = {
   excerpt: string;
   image: string;
   slug?: string;
-  url?: string;
+  href?: string;
   subtitle?: string;
   teaserImage: string;
   title: string;

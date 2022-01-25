@@ -14,7 +14,7 @@
         "It's time to start giving back. Participants could vote for their favourite nominated open-source projects and we distributed USD $10,000 between these projects.",
       image: "/images/opensource/devxconf.png",
       isNotAnActualPost: true,
-      url: "https://devxconf.org/opensource",
+      href: "https://devxconf.org/opensource",
     },
     {
       title: "Platform to Foster OSS Contributions",
@@ -22,7 +22,7 @@
         "We created contribute.dev to showcase open-source project with an automated developer environment. Here new contributors can easily find new projects for frictionless open-source contributions.",
       image: "/images/opensource/contribute.dev.png",
       isNotAnActualPost: true,
-      url: "https://contribute.dev",
+      href: "https://contribute.dev",
     },
   ];
 </script>

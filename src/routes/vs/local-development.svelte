@@ -3,10 +3,10 @@
 </script>
 
 <script>
-  import MeetBobAndAlice from "$lib/components/gitpod-vs-local-development/meet-bob-and-alice.svelte";
-  import Header from "$lib/components/gitpod-vs-local-development/header.svelte";
+  import MeetBobAndAlice from "$lib/components/local-development/meet-bob-and-alice.svelte";
+  import Header from "$lib/components/local-development/header.svelte";
   import Explore from "$lib/components/explore.svelte";
-  import GitpodVsLocalDevelopmentPost from "$lib/components/gitpod-vs-local-development-post.svelte";
+  import GitpodVsLocalDevelopmentPost from "$lib/components/local-development-post.svelte";
   import OpenGraph from "$lib/components/open-graph.svelte";
   import CalloutSecondary from "$lib/components/callout-secondary.svelte";
 </script>

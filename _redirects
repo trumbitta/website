@@ -68,7 +68,7 @@
 /docs/editors/jetbrains-private-beta /docs/editors/ 301
 /education /pricing#do-you-offer-discounts-for-students-and-educational-institutions 301
 /gitpod-business.html /pricing 301
-/gitpod-vs-codespaces /gitpod-vs-github-codespaces 301
+/gitpod-vs-codespaces /vs/github-codespaces 301
 /media /blog/next-chapter-for-gitpod 301
 /memes https://github.com/gitpod-io/gitpod/issues/6877 301
 /privacy/terms.html /terms 301
@@ -77,13 +77,14 @@
 /screencasts/always-ready-to-code /screencasts/getting-started-with-gitpod 301
 /screencasts/navigating-your-workspace /screencasts/my-workspace-is-running-now-what 301
 /values https://www.notion.so/gitpod/Brand-Values-2ed4c2f93c84499b98e3b5389980992e
-/dashboard https://gitpod.io/
-/projects https://gitpod.io/
-/workspaces https://gitpod.io/workspaces/
-/settings https://gitpod.io/account
-/notifications https://gitpod.io/notifications
-/plans https://gitpod.io/plans
-/teams https://gitpod.io/teams
-/variables https://gitpod.io/variables
-/integrations https://gitpod.io/integrations
-/preferences https://gitpod.io/preferences
+/dashboard https://gitpod.io/ 301
+/projects https://gitpod.io/ 301
+/workspaces https://gitpod.io/workspaces/ 301
+/settings https://gitpod.io/account 301
+/notifications https://gitpod.io/notifications 301
+/plans https://gitpod.io/plans 301
+/teams https://gitpod.io/teams 301
+/variables https://gitpod.io/variables 301
+/integrations https://gitpod.io/integrations 301
+/preferences https://gitpod.io/preferences 301
+/gitpod-vs-github-codespaces /vs/github-codespaces 301

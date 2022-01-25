@@ -125,7 +125,7 @@
         more resource efficient and thereby very cost-effective. With Gitpod you
         can choose the tools you would like to work with. It's open source and
         also available for self-hosting. Learn more on <a
-          href="/gitpod-vs-github-codespaces">Gitpod vs Codespaces</a
+          href="/vs/github-codespaces">Gitpod vs Codespaces</a
         >.
       </p>
     </Faq>

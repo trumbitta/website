@@ -4,11 +4,11 @@
 
 <Section>
   <div
-    class="card rounded-4xl shadow-brand max-w-4xl mx-auto text-center mb-xx-large"
+    class="p-xx-small sm:py-small sm:px-x-small md:p-medium bg-off-white rounded-4xl shadow-brand max-w-4xl mx-auto text-center mb-xx-large"
   >
     <h2>To become always ready to code</h2>
     <ol
-      class="max-w-xl list-decimal pl-small md:px-small text-left mx-auto mt-medium mb-large space-y-macro text-p-large"
+      class="max-w-xl w-full list-decimal pl-small md:px-small text-left mx-auto my-small lg:mt-medium lg:mb-large space-y-macro text-p-large"
     >
       <li>
         Help Gitpod understand your repository by creating a gitpod.yml file

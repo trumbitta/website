@@ -16,7 +16,9 @@
   }
 </style>
 
-<div class="card text-center shadow-xl">
+<div
+  class="p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-off-white text-center shadow-xl"
+>
   <!-- svelte-ignore a11y-missing-attribute -->
   <img
     src="/images/contact/{contactCard.image}"

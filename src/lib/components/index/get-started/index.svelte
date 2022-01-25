@@ -6,20 +6,17 @@
 
 <style lang="postcss">
   .cards-container {
-    display: flex;
-    justify-content: space-between;
+    @apply flex justify-between;
 
     @media (max-width: 944px) {
-      flex-direction: column;
+      @apply flex-col mx-auto;
       max-width: 600px;
-      margin: 0 auto;
     }
   }
 
   .card {
+    @apply p-xx-small sm:py-small sm:px-x-small md:p-medium rounded-2xl bg-white text-center;
     flex: 0 0 49%;
-    text-align: center;
-    background: var(--white);
 
     @media (max-width: 1140px) {
       padding: var(--small) var(--x-small);

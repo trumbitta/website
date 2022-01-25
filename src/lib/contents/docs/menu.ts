@@ -22,7 +22,7 @@ export const MENU: MenuEntry[] = [
     M(".gitpod.yml", "config-gitpod-file"),
     M("Custom Container", "config-docker"),
     M("Start Tasks", "config-start-tasks"),
-    M("Exposing Ports", "config-ports"),
+    M("Ports", "config-ports"),
     M("Prebuilds", "prebuilds"),
     M("Environment Variables", "environment-variables"),
     M("Network Bridging", "configure/tailscale"),
