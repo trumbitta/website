@@ -22,10 +22,6 @@
     ul {
       @apply px-xx-small mt-macro;
     }
-
-    .card {
-      @apply pb-macro;
-    }
   }
   @media (max-width: 1200px) {
     .toc li {

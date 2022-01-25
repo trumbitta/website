@@ -5,12 +5,6 @@
 </script>
 
 <style lang="postcss">
-  .card {
-    @apply mx-auto lg:mx-0;
-    @media (max-width: 375px) {
-      @apply px-micro;
-    }
-  }
   p {
     color: var(--dark-grey);
   }

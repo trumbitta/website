@@ -425,7 +425,7 @@ export const pricingFAQ: FAQ = {
     {
       title: "How does Gitpod differ from GitHub Codespaces?",
       content:
-        '<p> With Gitpod you can get started in a flash, the startup times are significantly faster than with GitHub Codespaces. Gitpod is also a lot more resource efficient and thereby very cost-effective. With Gitpod you can choose the tools you would like to work with. It\'s open source and also available for self-hosting. Learn more on <a href="/gitpod-vs-github-codespaces">Gitpod vs Codespaces</a >. </p>',
+        '<p> With Gitpod you can get started in a flash, the startup times are significantly faster than with GitHub Codespaces. Gitpod is also a lot more resource efficient and thereby very cost-effective. With Gitpod you can choose the tools you would like to work with. It\'s open source and also available for self-hosting. Learn more on <a href="/vs/github-codespaces">Gitpod vs Codespaces</a >. </p>',
     },
     {
       title: "Still have more questions?",

@@ -28,10 +28,7 @@
     display: flex;
     align-items: center;
   }
-  .featureTable .card {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-  }
+
   .featureTable .card-heading {
     height: 5rem;
     display: flex;
@@ -44,14 +41,6 @@
   .featureTable [aria-label] {
     min-height: 1.5rem;
     min-width: 1.5rem;
-  }
-  .ticklist > li {
-    display: flex;
-    align-items: flex-start;
-  }
-  .ticklist > li > img {
-    width: 24px;
-    @apply mr-micro ml-0;
   }
 
   .page-bottom {
