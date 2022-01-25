@@ -27,10 +27,6 @@
     ul {
       @apply px-xx-small mt-macro;
     }
-
-    .card {
-      @apply pb-macro;
-    }
   }
 
   .featureTable > * > * {
