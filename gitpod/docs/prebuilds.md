@@ -54,6 +54,13 @@ To create a new project:
 - To share projects with other users, create the project in a team, otherwise use your own account.
 - A sample `.gitpod.yml` with an init task will be included in your next workspace (unless the file already exists.)
 
+#### Project environment variables
+
+Environment variables which are defined in project settings will be visible in prebuilds. This is useful for prebuilds to access restricted services.
+
+**WARNING**  
+Care should be taken with secrets in prebuilds. Do not save secrets in a way which could leak into workspaces. This especially true for public repositories.
+
 ## Configuring prebuilds manually.
 
 #### GitHub
@@ -200,7 +207,7 @@ github:
 The `addComment` and `addBadge` behaviours are not mutually exclusive (i.e. enabling one does not disable the other).
 If you don't want the comments to be added, disable them using `addComment: false`.
 
-## Access to environment variables in Prebuilds
+## User specific environment variables in prebuilds
 
 It is not necessarily best practice to have user specific environment variables in a prebuild `init` block, but sometimes there are build time requirements that mean certain tokens need setting or files need creating. Environment variables defined within your Gitpod Variables preferences are not imported by default, but they can be accessed with the following command within an `init` block:
 

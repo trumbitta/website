@@ -27,15 +27,15 @@ const handleBlogPosts = async ({ request, resolve }) => {
 
 const handleChangelogEntries = async ({ request, resolve }) => {
   const changelogEntries = await Promise.all(
-    Object.entries(import.meta.glob("/src/lib/contents/changelog/*.md")).map(
-      async ([, mod]) => {
+    Object.entries(import.meta.glob("/src/lib/contents/changelog/*.md"))
+      .filter(([path]) => !path.endsWith("_template.md"))
+      .map(async ([, mod]) => {
         const { default: content, metadata } = await mod();
         return {
           ...metadata,
           content: content.render().html,
         };
-      }
-    )
+      })
   );
   changelogEntries.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
   request.locals.changelogEntries = changelogEntries;

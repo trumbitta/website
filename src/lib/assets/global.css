@@ -27,6 +27,12 @@
     @apply m-0 min-h-screen text-dark-grey bg-sand-light text-p-medium;
   }
 
+  /* Make images easier to work with */
+  img,
+  picture {
+    @apply max-w-full block object-contain;
+  }
+
   a {
     @apply underline text-link-grey underline-offset-[0.25em];
   }

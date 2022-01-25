@@ -5,7 +5,17 @@
 
   const popperOptions = {
     placement: "top-start",
-    modifiers: [{ name: "offset", options: { offset: [-8, 8] } }],
+    modifiers: [
+      {
+        name: "offset",
+        options: {
+          offset: ({ placement }) => {
+            if (placement === "top-start") return [-8, 8];
+            return [8, 8];
+          },
+        },
+      },
+    ],
   } as any;
 
   let clazz = "";
@@ -13,12 +23,17 @@
 
   export let title: string = "";
   let isRendered: boolean = false;
-  let isClicked: boolean = false;
 </script>
 
 <style lang="postcss">
   .tooltip {
     @apply w-auto text-off-white bg-[#565252] text-xs py-macro px-2.5 rounded-xl normal-case font-normal z-50;
+
+    &::before {
+      content: "";
+      @apply absolute block h-10 left-0 w-full -z-10;
+      bottom: -60%;
+    }
   }
 
   .tooltip :global(a) {
@@ -58,9 +73,6 @@
     <slot />
 
     <img
-      on:click={() => {
-        isClicked = !isClicked;
-      }}
       use:popperRef
       src="/svg/question-mark.svg"
       alt="Tooltip"
@@ -68,10 +80,10 @@
     />
   </button>
 
-  {#if isClicked || isRendered}
+  {#if isRendered}
     <div class="tooltip" use:popperContent={popperOptions}>
       {@html title}
-      <div class="arrow" data-popper-arrow />
+      <div class="arrow -z-10" data-popper-arrow />
     </div>
   {/if}
 </span>
