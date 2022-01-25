@@ -209,12 +209,16 @@ If you don't want the comments to be added, disable them using `addComment: fals
 
 ## User specific environment variables in prebuilds
 
-It is not necessarily best practice to have user specific environment variables in a prebuild `init` block, but sometimes there are build time requirements that mean certain tokens need setting or files need creating. Environment variables defined within your Gitpod Variables preferences are not imported by default, but they can be accessed with the following command within an `init` block:
+It is not necessarily best practice to have user specific environment variables in a prebuild `before` or `init` block, but sometimes there are build time requirements that mean certain tokens need setting or files need creating. Environment variables defined within your Gitpod Variables preferences are not imported by default, but they can be accessed with the following command within a `before` or `init` block:
 
 ```yaml
 tasks:
+  - before: |
+      eval $(command gp env -e)
+      echo "Hello ${MY_VAR}"
   - init: |
-      eval $(gp env -e)
+      eval $(command gp env -e)
+      echo "Hello ${MY_VAR}"
 ```
 
 After that, the available environment variables will be installed into the rest of you shell script and can be accessed normally.
